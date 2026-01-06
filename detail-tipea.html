@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detail Unit — Bernadyland</title>
+  <meta name="description" content="Detail unit Bernadyland: galeri, spesifikasi, fasilitas, lokasi, dan tombol booking WhatsApp." />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+
+  <!-- FLOATING NAVBAR -->
+  <div class="jm-floatNav-wrap">
+    <nav class="navbar navbar-expand-lg jm-floatNav">
+      <div class="container-fluid px-3 px-lg-4">
+
+        <!-- Brand -->
+        <a class="navbar-brand jm-brand" href="/">
+          <span class="jm-logoWrap">
+            <img src="assets/img/logo-bernadyland.svg" alt="Bernadyland" class="jm-logo"
+                 onerror="this.style.display='none'">
+            <span class="jm-logoFallback">B</span>
+          </span>
+          <span class="jm-brandText d-none d-sm-inline">Bernadyland</span>
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler jm-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#jmFloatNav" aria-controls="jmFloatNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="jmFloatNav">
+          <ul class="navbar-nav jm-navCenter mx-lg-auto gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="cariperumahan.html">Cari Perumahan</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          </ul>
+
+          <div class="jm-navRight ms-lg-3">
+            <a class="btn jm-waBtn" href="cariperumahan.html">Cari</a>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+
+  <!-- PAGE -->
+  <main class="du-page" id="top">
+    <div class="container">
+
+      <!-- Breadcrumb + Actions -->
+      <div class="du-topbar">
+        <nav aria-label="breadcrumb" class="du-breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="cariperumahan.html">Cari Perumahan</a></li>
+            <li class="breadcrumb-item active" aria-current="page" id="duCrumbName">Detail Unit</li>
+          </ol>
+        </nav>
+
+        <div class="du-actions">
+          <button class="du-iconBtn" type="button" id="btnShare" aria-label="Bagikan">
+            <i class="bi bi-share"></i>
+          </button>
+          <button class="du-iconBtn is-heart" type="button" id="btnFav" aria-label="Simpan">
+            <i class="bi bi-heart"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Header Title -->
+      <header class="du-header">
+        <div>
+          <h1 class="du-title" id="duTitle">Bernadyland — Unit</h1>
+          <div class="du-sub">
+            <span class="du-subItem"><i class="bi bi-geo-alt"></i> <span id="duAddress">Alamat</span></span>
+            <span class="du-subDot">•</span>
+            <span class="du-subItem"><i class="bi bi-shield-check"></i> Legalitas <span id="duLegal">Jelas</span></span>
+          </div>
+
+          <div class="du-badges mt-3">
+            <span class="du-badge" id="duBadgeStock"><i class="bi bi-lightning-charge"></i> Sisa <span id="duStock">-</span> unit</span>
+            <span class="du-badge"><i class="bi bi-bank"></i> Bisa KPR</span>
+            <span class="du-badge"><i class="bi bi-house-check"></i> Cluster bernilai investasi</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Grid -->
+      <div class="row g-4 mt-1">
+        <!-- LEFT: Gallery + Content -->
+        <section class="col-lg-8">
+
+          <!-- Gallery Card -->
+          <div class="du-card du-gallery">
+            <div class="du-heroMedia">
+              <img id="duMainImg" src="" alt="Foto Unit" loading="lazy">
+              <button class="du-photosBtn" type="button" id="btnOpenGallery">
+                <i class="bi bi-images"></i>
+                <span id="duPhotoCount">Lihat Foto</span>
+              </button>
+
+              <span class="du-pill" id="duPillTop">Best Seller</span>
+            </div>
+
+            <div class="du-thumbRow" id="duThumbRow" aria-label="Thumbnail foto">
+              <!-- thumbnails injected -->
+            </div>
+          </div>
+
+          <!-- Quick Specs -->
+          <div class="du-card mt-3">
+            <div class="du-cardHead">
+              <div>
+                <div class="kicker">Ringkas</div>
+                <div class="du-cardTitle">Spesifikasi Utama</div>
+              </div>
+              <a class="du-link" href="#lokasi">Lihat Lokasi <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="du-specGrid" id="duSpecGrid">
+              <!-- specs injected -->
+            </div>
+          </div>
+
+          <!-- Description + Facilities -->
+          <div class="row g-3 mt-0">
+            <div class="col-lg-6">
+              <div class="du-card h-100">
+                <div class="du-cardHead">
+                  <div>
+                    <div class="kicker">Tentang Unit</div>
+                    <div class="du-cardTitle">Deskripsi</div>
+                  </div>
+                </div>
+                <p class="du-desc" id="duDesc">
+                  -
+                </p>
+
+                <div class="du-miniInfo">
+                  <div class="du-miniItem">
+                    <div class="du-miniLabel">Cocok untuk</div>
+                    <div class="du-miniValue" id="duFitFor">Keluarga / Investasi</div>
+                  </div>
+                  <div class="du-miniItem">
+                    <div class="du-miniLabel">Status</div>
+                    <div class="du-miniValue" id="duStatus">Ready / Indent</div>
+                  </div>
+                </div>
+
+                <div class="du-note">
+                  <i class="bi bi-info-circle"></i>
+                  <span>Info harga & promo dapat berubah. Klik tombol booking untuk pricelist terbaru.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="du-card h-100">
+                <div class="du-cardHead">
+                  <div>
+                    <div class="kicker">Fasilitas</div>
+                    <div class="du-cardTitle">Yang Kamu Dapat</div>
+                  </div>
+                </div>
+
+                <div class="accordion du-acc" id="duFacilitiesAcc">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#fac1" aria-expanded="true" aria-controls="fac1">
+                        Fasilitas Cluster
+                      </button>
+                    </h2>
+                    <div id="fac1" class="accordion-collapse collapse show" data-bs-parent="#duFacilitiesAcc">
+                      <div class="accordion-body">
+                        <ul class="du-list" id="duFacilityCluster"></ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#fac2" aria-expanded="false" aria-controls="fac2">
+                        Fitur Unit
+                      </button>
+                    </h2>
+                    <div id="fac2" class="accordion-collapse collapse" data-bs-parent="#duFacilitiesAcc">
+                      <div class="accordion-body">
+                        <ul class="du-list" id="duFacilityUnit"></ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#fac3" aria-expanded="false" aria-controls="fac3">
+                        Info Penting
+                      </button>
+                    </h2>
+                    <div id="fac3" class="accordion-collapse collapse" data-bs-parent="#duFacilitiesAcc">
+                      <div class="accordion-body">
+                        <div class="du-infoGrid" id="duInfoGrid"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="du-card mt-3" id="lokasi">
+            <div class="du-cardHead">
+              <div>
+                <div class="kicker">Lokasi</div>
+                <div class="du-cardTitle">Lokasi Properti</div>
+              </div>
+              <a class="du-link" id="duOpenMaps" target="_blank" rel="noopener" href="#">
+                Buka di Maps <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+
+            <div class="du-mapWrap">
+              <iframe
+                id="duMapFrame"
+                title="Peta Lokasi"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src=""
+              ></iframe>
+            </div>
+
+            <div class="du-locPoints mt-3" id="duLocPoints"></div>
+          </div>
+
+          <!-- Similar -->
+          <div class="du-similar mt-4">
+            <div class="d-flex align-items-end justify-content-between gap-3">
+              <div>
+                <div class="kicker">Rekomendasi</div>
+                <h2 class="du-h2 mb-0">Unit Serupa</h2>
+              </div>
+              <a class="du-link" href="cariperumahan.html">Lihat semua <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="row g-3 mt-2" id="duSimilarGrid">
+              <!-- similar cards injected -->
+            </div>
+          </div>
+
+        </section>
+
+        <!-- RIGHT: Sticky Booking -->
+        <aside class="col-lg-4">
+          <div class="du-sticky">
+
+            <div class="du-card du-bookCard">
+              <div class="du-bookTop">
+                <span class="du-chipStock" id="duChipStock">Sisa unit</span>
+                <div class="du-rating">
+                  <i class="bi bi-star-fill"></i>
+                  <span id="duRating">4.8</span>
+                  <span class="du-rateMeta">(<span id="duReviews">24</span> ulasan)</span>
+                </div>
+              </div>
+
+              <div class="du-price">
+                <div class="du-priceMain" id="duPrice">Rp -</div>
+                <div class="du-priceSub">mulai dari (estimasi) • hubungi untuk pricelist resmi</div>
+              </div>
+
+              <div class="du-bookBtns">
+                <a class="btn btn-accent btn-lg w-100" id="duBtnBooking" target="_blank" rel="noopener" href="#">
+                  <i class="bi bi-calendar2-check me-2"></i> Booking Survey
+                </a>
+                <a class="btn btn-outline-primary btn-lg w-100" id="duBtnWhatsApp" target="_blank" rel="noopener" href="#">
+                  <i class="bi bi-whatsapp me-2"></i> Tanya Pricelist
+                </a>
+              </div>
+
+              <div class="du-bookBox">
+                <div class="du-bookBoxTitle">Rincian Tambahan</div>
+                <div class="du-kv">
+                  <div>Estimasi DP</div>
+                  <div class="fw-bold" id="duDp">Rp -</div>
+                </div>
+                <div class="du-kv">
+                  <div>Biaya Admin</div>
+                  <div class="fw-bold" id="duAdmin">Rp -</div>
+                </div>
+                <div class="du-kv">
+                  <div>Perkiraan Cicilan*</div>
+                  <div class="fw-bold" id="duInstallment">Rp -/bulan</div>
+                </div>
+                <div class="du-bookSmall">
+                  *Simulasi cepat. Nilai akhir mengikuti bank & pengajuan.
+                </div>
+              </div>
+
+              <div class="du-legalNote">
+                Dengan klik tombol, kamu setuju dihubungi untuk info unit Bernadyland.
+              </div>
+            </div>
+
+            <!-- Small FAQ box -->
+            <div class="du-card mt-3">
+              <div class="du-cardHead">
+                <div>
+                  <div class="kicker">FAQ</div>
+                  <div class="du-cardTitle">Pertanyaan Cepat</div>
+                </div>
+              </div>
+
+              <div class="accordion du-acc" id="duFaqAcc">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
+                      Bisa KPR?
+                    </button>
+                  </h2>
+                  <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#duFaqAcc">
+                    <div class="accordion-body">
+                      Bisa. Tim kami bantu simulasi & pengajuan sesuai profil kamu.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                      Apakah ada promo?
+                    </button>
+                  </h2>
+                  <div id="q2" class="accordion-collapse collapse" data-bs-parent="#duFaqAcc">
+                    <div class="accordion-body">
+                      Ada promo berkala (DP ringan/bonus). Klik “Tanya Pricelist” untuk info terbaru.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                      Bisa survey virtual?
+                    </button>
+                  </h2>
+                  <div id="q3" class="accordion-collapse collapse" data-bs-parent="#duFaqAcc">
+                    <div class="accordion-body">
+                      Bisa. Kami bisa kirim video singkat, foto lengkap, atau jadwalkan video call.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- GALLERY MODAL -->
+  <div class="modal fade" id="duGalleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content du-modal">
+        <div class="du-modalTop">
+          <div class="du-modalTitle" id="duModalTitle">Galeri Unit</div>
+          <button type="button" class="du-modalClose" data-bs-dismiss="modal" aria-label="Close">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+
+        <div class="du-modalBody">
+          <div class="du-modalStage">
+            <button class="du-navBtn" type="button" id="duPrev" aria-label="Sebelumnya"><i class="bi bi-chevron-left"></i></button>
+            <img id="duModalImg" src="" alt="Foto galeri" />
+            <button class="du-navBtn" type="button" id="duNext" aria-label="Berikutnya"><i class="bi bi-chevron-right"></i></button>
+          </div>
+
+          <div class="du-modalThumbs" id="duModalThumbs"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="du-toast" id="duToast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Floating WhatsApp -->
+  <a class="wa-float"
+     href="https://wa.me/62895369969300?text=Halo%20Bernadyland,%20saya%20mau%20tanya%20info%20perumahan."
+     target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    <span class="d-none d-md-inline">Chat WhatsApp</span>
+  </a>
+
+  <!-- FOOTER (simple / normal) -->
+<footer class="jm-footerSimple">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+
+      <!-- Brand -->
+      <div class="col-lg-5">
+        <a class="jm-footerBrand" href="index.html" aria-label="Bernadyland">
+          <span class="jm-logoWrap">
+            <img src="assets/img/logo-bernadyland.svg" alt="Bernadyland" class="jm-logo"
+                 onerror="this.style.display='none'">
+            <span class="jm-logoFallback">B</span>
+          </span>
+          <span class="jm-footerBrandText">Bernadyland</span>
+        </a>
+
+        <p class="jm-footerDesc">
+          Perumahan modern dengan lokasi strategis, legalitas jelas, dan skema pembayaran fleksibel.
+          Temukan unit yang cocok lalu hubungi kami untuk pricelist terbaru.
+        </p>
+
+        <div class="jm-footerBtns">
+          <a class="btn jm-footerGhost" target="_blank" rel="noopener"
+             href="https://wa.me/62895369969300?text=Halo%20Bernadyland,%20saya%20mau%20minta%20pricelist%20dan%20jadwal%20survey.">
+            <i class="bi bi-whatsapp me-2"></i> Hubungi Kami
+          </a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="col-6 col-lg-2">
+        <div class="jm-footerTitle">Menu</div>
+        <ul class="jm-footerList">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="cariperumahan.html">Cari Perumahan</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-lg-3">
+        <div class="jm-footerTitle">Kontak</div>
+
+        <ul class="jm-footerInfo">
+          <li><i class="bi bi-geo-alt"></i><span>Lokasi proyek (sesuaikan)</span></li>
+          <li><i class="bi bi-envelope"></i><span>hello@bernadyland.com</span></li>
+        </ul>
+
+        <div class="jm-footerSocial">
+          <a class="jm-soc" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a class="jm-soc" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a class="jm-soc" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a class="jm-soc" target="_blank" rel="noopener"
+             href="https://wa.me/628XXXXXXXXXX?text=Halo%20Bernadyland,%20saya%20mau%20minta%20pricelist."
+             aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="jm-footerBottom">
+      <div>© <span id="jmYear"></span> Bernadyland. All rights reserved.</div>
+      <div class="jm-footerMiniLinks">
+        <a href="about.html">Tentang</a><span>•</span>
+        <a href="blog.html">Blog</a><span>•</span>
+        <a href="cariperumahan.html">Cari Perumahan</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- PAGE SCRIPT -->
+  <script>
+    (function () {
+      // ========= Helpers =========
+      const $ = (sel, root=document) => root.querySelector(sel);
+      const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+
+      function getParam(name){
+        const url = new URL(window.location.href);
+        return url.searchParams.get(name);
+      }
+
+      function rupiah(num){
+        const n = Number(num || 0);
+        return "Rp " + n.toLocaleString("id-ID");
+      }
+
+      function encWA(text){
+        return encodeURIComponent(text);
+      }
+
+      function toast(msg){
+        const el = $("#duToast");
+        el.textContent = msg;
+        el.classList.add("is-show");
+        setTimeout(() => el.classList.remove("is-show"), 2200);
+      }
+
+      // ========= Data Unit (ubah sesuai kebutuhan real kamu) =========
+      const UNITS = {
+        "tipe-a": {
+          id: "tipe-a",
+          name: "Bernadyland Tipe A",
+          tag: "Tipe A • Best Seller",
+          pill: "HOT",
+          address: "Dekat akses utama • (Sesuaikan alamat proyek)",
+          mapsQuery: "Bernadyland Perumahan",
+          legal: "SHM/HGB + PBG",
+          fitFor: "Keluarga kecil / investasi sewa",
+          status: "Ready stock",
+          stock: 3,
+          rating: 4.8,
+          reviews: 24,
+          price: 385000000,
+          dp: 50000000,
+          admin: 2500000,
+          installment: 3200000,
+          specs: [
+            {label:"LT", value:"60 m²", icon:"bi-aspect-ratio"},
+            {label:"LB", value:"36 m²", icon:"bi-house"},
+            {label:"Kamar", value:"2 KT", icon:"bi-door-closed"},
+            {label:"KM", value:"1 KM", icon:"bi-droplet"},
+            {label:"Carport", value:"1", icon:"bi-car-front"},
+            {label:"Listrik", value:"1300W", icon:"bi-lightning-charge"}
+          ],
+          desc: "Tipe A dirancang ringkas tapi tetap lega. Cocok untuk keluarga muda yang ingin lokasi strategis dan legalitas jelas. Layout efisien, pencahayaan baik, dan mudah di-upgrade.",
+          facilityCluster: ["One gate system", "Security 24 jam", "CCTV area umum", "Taman & ruang terbuka"],
+          facilityUnit: ["Ventilasi & pencahayaan optimal", "Kamar utama nyaman", "Area dapur fungsional", "Finishing rapi"],
+          infoGrid: [
+            {k:"Estimasi serah terima", v:"Cepat (sesuaikan)"},
+            {k:"Skema pembayaran", v:"Cash / KPR"},
+            {k:"Dokumen", v:"SHM/HGB + PBG"},
+            {k:"Catatan", v:"Promo mengikuti periode"}
+          ],
+          locPoints: [
+            {icon:"bi-geo-alt", text:"Akses ke jalan utama (±5–10 menit)"},
+            {icon:"bi-building", text:"Dekat fasilitas umum (sesuaikan)"},
+            {icon:"bi-bus-front", text:"Akses transportasi mudah (sesuaikan)"}
+          ],
+          images: [
+            "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1560185127-6a8c0dff9c63?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=2400&q=80"
+          ],
+          similar: ["tipe-b","tipe-c","tipe-a-plus"]
+        },
+
+        "tipe-b": {
+          id: "tipe-b",
+          name: "Bernadyland Tipe B",
+          tag: "Tipe B • Favorit keluarga",
+          pill: "Bisa KPR",
+          address: "Dekat sekolah & fasilitas • (Sesuaikan alamat proyek)",
+          mapsQuery: "Bernadyland Perumahan",
+          legal: "SHM/HGB + PBG",
+          fitFor: "Keluarga 2–4 orang",
+          status: "Ready / terbatas",
+          stock: 5,
+          rating: 4.7,
+          reviews: 19,
+          price: 465000000,
+          dp: 65000000,
+          admin: 2500000,
+          installment: 3900000,
+          specs: [
+            {label:"LT", value:"72 m²", icon:"bi-aspect-ratio"},
+            {label:"LB", value:"45 m²", icon:"bi-house"},
+            {label:"Kamar", value:"2–3 KT", icon:"bi-door-closed"},
+            {label:"KM", value:"2 KM", icon:"bi-droplet"},
+            {label:"Carport", value:"1", icon:"bi-car-front"},
+            {label:"Listrik", value:"2200W", icon:"bi-lightning-charge"}
+          ],
+          desc: "Tipe B punya ruang lebih fleksibel untuk keluarga. Area sosial lebih lega, dan opsi kamar bisa menyesuaikan kebutuhan (2–3 kamar).",
+          facilityCluster: ["One gate system", "Security 24 jam", "Taman bermain", "Jalan cluster lebar"],
+          facilityUnit: ["Ruang tamu lega", "Opsi kamar tambahan", "Dapur + ruang makan", "Finishing premium (sesuaikan)"],
+          infoGrid: [
+            {k:"Estimasi serah terima", v:"Cepat (sesuaikan)"},
+            {k:"Skema pembayaran", v:"Cash / KPR"},
+            {k:"Dokumen", v:"SHM/HGB + PBG"},
+            {k:"Catatan", v:"Promo mengikuti periode"}
+          ],
+          locPoints: [
+            {icon:"bi-geo-alt", text:"Dekat fasilitas pendidikan"},
+            {icon:"bi-bag", text:"Dekat pusat belanja (sesuaikan)"},
+            {icon:"bi-hospital", text:"Dekat klinik/RS (sesuaikan)"}
+          ],
+          images: [
+            "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=2400&q=80"
+          ],
+          similar: ["tipe-a","tipe-c","tipe-b-plus"]
+        },
+
+        "tipe-c": {
+          id: "tipe-c",
+          name: "Bernadyland Tipe C",
+          tag: "Tipe C • Ruang lebih lega",
+          pill: "Legal Jelas",
+          address: "Area berkembang • (Sesuaikan alamat proyek)",
+          mapsQuery: "Bernadyland Perumahan",
+          legal: "SHM/HGB + PBG",
+          fitFor: "Keluarga besar / upgrade",
+          status: "Ready / terbatas",
+          stock: 2,
+          rating: 4.9,
+          reviews: 11,
+          price: 545000000,
+          dp: 75000000,
+          admin: 3000000,
+          installment: 4600000,
+          specs: [
+            {label:"LT", value:"90 m²", icon:"bi-aspect-ratio"},
+            {label:"LB", value:"60 m²", icon:"bi-house"},
+            {label:"Kamar", value:"3 KT", icon:"bi-door-closed"},
+            {label:"KM", value:"2 KM", icon:"bi-droplet"},
+            {label:"Carport", value:"1", icon:"bi-car-front"},
+            {label:"Listrik", value:"2200W", icon:"bi-lightning-charge"}
+          ],
+          desc: "Tipe C menawarkan ruang lebih lega untuk kebutuhan keluarga. Cocok untuk yang butuh 3 kamar dan area berkumpul yang nyaman.",
+          facilityCluster: ["Security 24 jam", "CCTV area umum", "Taman & jogging track (sesuaikan)", "One gate system"],
+          facilityUnit: ["3 kamar tidur", "2 kamar mandi", "Area keluarga lega", "Ruang servis (opsional)"],
+          infoGrid: [
+            {k:"Estimasi serah terima", v:"Cepat (sesuaikan)"},
+            {k:"Skema pembayaran", v:"Cash / KPR"},
+            {k:"Dokumen", v:"SHM/HGB + PBG"},
+            {k:"Catatan", v:"Promo mengikuti periode"}
+          ],
+          locPoints: [
+            {icon:"bi-geo-alt", text:"Akses mudah ke jalan utama"},
+            {icon:"bi-bank", text:"Dibantu proses KPR"},
+            {icon:"bi-shield-check", text:"Legalitas jelas"}
+          ],
+          images: [
+            "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1560185127-6a8c0dff9c63?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=2400&q=80"
+          ],
+          similar: ["tipe-b","tipe-d","tipe-a-plus"]
+        },
+
+        "tipe-d": {
+          id: "tipe-d",
+          name: "Bernadyland Tipe D",
+          tag: "Tipe D • Upgrade tersedia",
+          pill: "Bonus Carport",
+          address: "Akses mudah • (Sesuaikan alamat proyek)",
+          mapsQuery: "Bernadyland Perumahan",
+          legal: "SHM/HGB + PBG",
+          fitFor: "Keluarga + kebutuhan ruang",
+          status: "Ready / limited",
+          stock: 1,
+          rating: 4.8,
+          reviews: 9,
+          price: 625000000,
+          dp: 85000000,
+          admin: 3000000,
+          installment: 5200000,
+          specs: [
+            {label:"LT", value:"84 m²", icon:"bi-aspect-ratio"},
+            {label:"LB", value:"54 m²", icon:"bi-house"},
+            {label:"Kamar", value:"3 KT", icon:"bi-door-closed"},
+            {label:"KM", value:"2 KM", icon:"bi-droplet"},
+            {label:"Carport", value:"2 (opsi)", icon:"bi-car-front"},
+            {label:"Listrik", value:"2200W", icon:"bi-lightning-charge"}
+          ],
+          desc: "Tipe D fokus ke kenyamanan + opsi upgrade. Layout lega, cocok untuk keluarga yang ingin space lebih dan carport lebih fleksibel.",
+          facilityCluster: ["One gate system", "Security 24 jam", "Area hijau", "Jalan cluster lebar"],
+          facilityUnit: ["Ruang keluarga lega", "3 kamar tidur", "2 kamar mandi", "Opsi upgrade carport"],
+          infoGrid: [
+            {k:"Estimasi serah terima", v:"Cepat (sesuaikan)"},
+            {k:"Skema pembayaran", v:"Cash / KPR"},
+            {k:"Dokumen", v:"SHM/HGB + PBG"},
+            {k:"Catatan", v:"Promo mengikuti periode"}
+          ],
+          locPoints: [
+            {icon:"bi-geo-alt", text:"Dekat akses utama"},
+            {icon:"bi-shield-check", text:"Cluster aman & tertata"},
+            {icon:"bi-house-check", text:"Cocok untuk tinggal/investasi"}
+          ],
+          images: [
+            "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=2400&q=80"
+          ],
+          similar: ["tipe-c","tipe-b-plus","tipe-a-plus"]
+        },
+
+        "tipe-a-plus": {
+          id: "tipe-a-plus",
+          name: "Bernadyland Tipe A+",
+          tag: "Tipe A+ • Layout fleksibel",
+          pill: "Upgrade",
+          address: "Dekat fasilitas • (Sesuaikan alamat proyek)",
+          mapsQuery: "Bernadyland Perumahan",
+          legal: "SHM/HGB + PBG",
+          fitFor: "Investasi / keluarga kecil",
+          status: "Ready",
+          stock: 4,
+          rating: 4.7,
+          reviews: 14,
+          price: 410000000,
+          dp: 55000000,
+          admin: 2500000,
+          installment: 3450000,
+          specs: [
+            {label:"LT", value:"66 m²", icon:"bi-aspect-ratio"},
+            {label:"LB", value:"40 m²", icon:"bi-house"},
+            {label:"Kamar", value:"2 KT", icon:"bi-door-closed"},
+            {label:"KM", value:"1 KM", icon:"bi-droplet"},
+            {label:"Carport", value:"1", icon:"bi-car-front"},
+            {label:"Listrik", value:"1300W", icon:"bi-lightning-charge"}
+          ],
+          desc: "Tipe A+ adalah versi lebih fleksibel untuk kamu yang ingin tambahan ruang. Cocok untuk upgrade kebutuhan tanpa naik terlalu jauh dari budget tipe A.",
+          facilityCluster: ["One gate system", "Security 24 jam", "Taman", "CCTV area umum"],
+          facilityUnit: ["Layout fleksibel", "Pencahayaan baik", "Finishing rapi", "Mudah upgrade"],
+          infoGrid: [
+            {k:"Estimasi serah terima", v:"Cepat (sesuaikan)"},
+            {k:"Skema pembayaran", v:"Cash / KPR"},
+            {k:"Dokumen", v:"SHM/HGB + PBG"},
+            {k:"Catatan", v:"Promo mengikuti periode"}
+          ],
+          locPoints: [
+            {icon:"bi-geo-alt", text:"Dekat fasilitas umum"},
+            {icon:"bi-bank", text:"Bisa KPR"},
+            {icon:"bi-lightning-charge", text:"Unit cepat diminati"}
+          ],
+          images: [
+            "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1560185127-6a8c0dff9c63?auto=format&fit=crop&w=2400&q=80"
+          ],
+          similar: ["tipe-a","tipe-b","tipe-c"]
+        },
+
+        "tipe-b-plus": {
+          id: "tipe-b-plus",
+          name: "Bernadyland Tipe B+",
+          tag: "Tipe B+ • Lebih luas",
+          pill: "Legal Jelas",
+          address: "Lokasi strategis • (Sesuaikan alamat proyek)",
+          mapsQuery: "Bernadyland Perumahan",
+          legal: "SHM/HGB + PBG",
+          fitFor: "Keluarga / upgrade",
+          status: "Ready terbatas",
+          stock: 2,
+          rating: 4.8,
+          reviews: 10,
+          price: 525000000,
+          dp: 70000000,
+          admin: 3000000,
+          installment: 4400000,
+          specs: [
+            {label:"LT", value:"80 m²", icon:"bi-aspect-ratio"},
+            {label:"LB", value:"55 m²", icon:"bi-house"},
+            {label:"Kamar", value:"3 KT", icon:"bi-door-closed"},
+            {label:"KM", value:"2 KM", icon:"bi-droplet"},
+            {label:"Carport", value:"1", icon:"bi-car-front"},
+            {label:"Listrik", value:"2200W", icon:"bi-lightning-charge"}
+          ],
+          desc: "Tipe B+ dibuat untuk keluarga yang ingin ruang lebih tanpa loncat ke tipe besar. Cocok untuk aktivitas harian dan rencana jangka panjang.",
+          facilityCluster: ["One gate system", "Security 24 jam", "Taman & area hijau", "CCTV area umum"],
+          facilityUnit: ["3 kamar tidur", "2 kamar mandi", "Ruang keluarga lega", "Area makan nyaman"],
+          infoGrid: [
+            {k:"Estimasi serah terima", v:"Cepat (sesuaikan)"},
+            {k:"Skema pembayaran", v:"Cash / KPR"},
+            {k:"Dokumen", v:"SHM/HGB + PBG"},
+            {k:"Catatan", v:"Promo mengikuti periode"}
+          ],
+          locPoints: [
+            {icon:"bi-geo-alt", text:"Akses mudah"},
+            {icon:"bi-building", text:"Dekat fasilitas"},
+            {icon:"bi-shield-check", text:"Legalitas jelas"}
+          ],
+          images: [
+            "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=2400&q=80",
+            "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=2400&q=80"
+          ],
+          similar: ["tipe-b","tipe-c","tipe-d"]
+        }
+      };
+
+      // ========= Read unit =========
+      const unitId = (getParam("unit") || "tipe-a").toLowerCase();
+      const unit = UNITS[unitId] || UNITS["tipe-a"];
+
+      // ========= Favorite (localStorage) =========
+      const FAV_KEY = "bernadyland_favs";
+      function readFavs(){
+        try { return JSON.parse(localStorage.getItem(FAV_KEY) || "[]"); }
+        catch { return []; }
+      }
+      function writeFavs(arr){
+        localStorage.setItem(FAV_KEY, JSON.stringify(arr));
+      }
+      function isFav(id){
+        return readFavs().includes(id);
+      }
+      function toggleFav(id){
+        const favs = readFavs();
+        const idx = favs.indexOf(id);
+        if(idx >= 0) favs.splice(idx, 1);
+        else favs.push(id);
+        writeFavs(favs);
+        return favs.includes(id);
+      }
+
+      // ========= Render =========
+      $("#duCrumbName").textContent = unit.name;
+      $("#duTitle").textContent = unit.name;
+      $("#duAddress").textContent = unit.address;
+      $("#duLegal").textContent = unit.legal;
+
+      $("#duStock").textContent = String(unit.stock);
+      $("#duChipStock").textContent = `Sisa ${unit.stock} unit`;
+      $("#duRating").textContent = String(unit.rating);
+      $("#duReviews").textContent = String(unit.reviews);
+
+      $("#duPrice").textContent = rupiah(unit.price);
+      $("#duDp").textContent = rupiah(unit.dp);
+      $("#duAdmin").textContent = rupiah(unit.admin);
+      $("#duInstallment").textContent = rupiah(unit.installment) + "/bulan";
+
+      $("#duPillTop").textContent = unit.pill || "Info";
+      $("#duDesc").textContent = unit.desc;
+      $("#duFitFor").textContent = unit.fitFor;
+      $("#duStatus").textContent = unit.status;
+
+      // Specs
+      const specGrid = $("#duSpecGrid");
+      specGrid.innerHTML = unit.specs.map(s => `
+        <div class="du-specItem">
+          <div class="du-specIco"><i class="bi ${s.icon}"></i></div>
+          <div>
+            <div class="du-specLabel">${s.label}</div>
+            <div class="du-specVal">${s.value}</div>
+          </div>
+        </div>
+      `).join("");
+
+      // Facilities
+      function li(list){ return list.map(x => `<li>${x}</li>`).join(""); }
+      $("#duFacilityCluster").innerHTML = li(unit.facilityCluster);
+      $("#duFacilityUnit").innerHTML = li(unit.facilityUnit);
+
+      const infoGrid = $("#duInfoGrid");
+      infoGrid.innerHTML = unit.infoGrid.map(it => `
+        <div class="du-infoItem">
+          <div class="du-infoK">${it.k}</div>
+          <div class="du-infoV">${it.v}</div>
+        </div>
+      `).join("");
+
+      // Location points
+      $("#duLocPoints").innerHTML = unit.locPoints.map(p => `
+        <div class="du-locItem">
+          <i class="bi ${p.icon}"></i>
+          <span>${p.text}</span>
+        </div>
+      `).join("");
+
+      // Maps
+      const mapsQuery = unit.mapsQuery || unit.address || "Bernadyland";
+      const mapEmbed = `https://www.google.com/maps?q=${encodeURIComponent(mapsQuery)}&output=embed`;
+      const mapLink  = `https://www.google.com/maps?q=${encodeURIComponent(mapsQuery)}`;
+      $("#duMapFrame").src = mapEmbed;
+      $("#duOpenMaps").href = mapLink;
+
+      // WhatsApp CTA
+      const WA_NUMBER = "62895369969300";
+      const waText = `Halo Bernadyland, saya mau tanya pricelist & jadwal survey untuk ${unit.name} (perkiraan mulai ${rupiah(unit.price)}).`;
+      const waBook = `Halo Bernadyland, saya mau booking survey untuk ${unit.name}. Mohon info jadwal yang tersedia.`;
+      $("#duBtnWhatsApp").href = `https://wa.me/${WA_NUMBER}?text=${encWA(waText)}`;
+      $("#duBtnBooking").href  = `https://wa.me/${WA_NUMBER}?text=${encWA(waBook)}`;
+
+      // Gallery thumbs + main image
+      let currentIndex = 0;
+      const imgs = unit.images || [];
+      const mainImg = $("#duMainImg");
+      const thumbRow = $("#duThumbRow");
+
+      function setMain(idx){
+        currentIndex = Math.max(0, Math.min(idx, imgs.length - 1));
+        mainImg.src = imgs[currentIndex];
+        $$(".du-thumb", thumbRow).forEach((b, i) => b.classList.toggle("is-active", i === currentIndex));
+      }
+
+      thumbRow.innerHTML = imgs.map((src, i) => `
+        <button class="du-thumb" type="button" aria-label="Foto ${i+1}">
+          <img src="${src}" alt="Thumbnail ${i+1}" loading="lazy">
+        </button>
+      `).join("");
+
+      $$(".du-thumb", thumbRow).forEach((btn, i) => btn.addEventListener("click", () => setMain(i)));
+
+      $("#duPhotoCount").textContent = `Lihat ${imgs.length} Foto`;
+      setMain(0);
+
+      // Modal gallery
+      const modalEl = $("#duGalleryModal");
+      const bsModal = new bootstrap.Modal(modalEl);
+      const modalImg = $("#duModalImg");
+      const modalThumbs = $("#duModalThumbs");
+
+      function renderModalThumbs(){
+        modalThumbs.innerHTML = imgs.map((src, i) => `
+          <button class="du-mThumb ${i===currentIndex ? "is-active" : ""}" type="button" aria-label="Foto ${i+1}">
+            <img src="${src}" alt="Thumb ${i+1}" loading="lazy">
+          </button>
+        `).join("");
+        $$(".du-mThumb", modalThumbs).forEach((b, i) => b.addEventListener("click", () => setModalIndex(i)));
+      }
+
+      function setModalIndex(idx){
+        currentIndex = Math.max(0, Math.min(idx, imgs.length - 1));
+        modalImg.src = imgs[currentIndex];
+        $$(".du-mThumb", modalThumbs).forEach((b, i) => b.classList.toggle("is-active", i === currentIndex));
+        $$(".du-thumb", thumbRow).forEach((b, i) => b.classList.toggle("is-active", i === currentIndex));
+        mainImg.src = imgs[currentIndex];
+      }
+
+      $("#btnOpenGallery").addEventListener("click", () => {
+        $("#duModalTitle").textContent = `Galeri — ${unit.name}`;
+        modalImg.src = imgs[currentIndex];
+        renderModalThumbs();
+        bsModal.show();
+      });
+
+      $("#duPrev").addEventListener("click", () => setModalIndex(currentIndex - 1));
+      $("#duNext").addEventListener("click", () => setModalIndex(currentIndex + 1));
+
+      // Keyboard nav inside modal
+      modalEl.addEventListener("keydown", (e) => {
+        if(e.key === "ArrowLeft") setModalIndex(currentIndex - 1);
+        if(e.key === "ArrowRight") setModalIndex(currentIndex + 1);
+      });
+
+      // Favorite button
+      const favBtn = $("#btnFav");
+      function syncFav(){
+        favBtn.classList.toggle("is-active", isFav(unit.id));
+      }
+      syncFav();
+      favBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const active = toggleFav(unit.id);
+        syncFav();
+        toast(active ? "Disimpan ke favorit" : "Dihapus dari favorit");
+      });
+
+      // Share
+      $("#btnShare").addEventListener("click", async () => {
+        const shareData = {
+          title: unit.name,
+          text: `Lihat detail ${unit.name} di Bernadyland`,
+          url: window.location.href
+        };
+
+        if (navigator.share) {
+          try {
+            await navigator.share(shareData);
+          } catch {}
+          return;
+        }
+
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          toast("Link disalin");
+        } catch {
+          toast("Gagal menyalin link");
+        }
+      });
+
+      // Similar units
+      const simGrid = $("#duSimilarGrid");
+      const simIds = unit.similar || [];
+      simGrid.innerHTML = simIds
+        .map(id => UNITS[id])
+        .filter(Boolean)
+        .slice(0, 3)
+        .map(u => `
+          <div class="col-md-6 col-xl-4">
+            <a class="du-sCard" href="detail-unit.html?unit=${encodeURIComponent(u.id)}">
+              <div class="du-sMedia">
+                <img src="${u.images[0]}" alt="${u.name}" loading="lazy">
+                <span class="du-sPill">${u.pill || "Info"}</span>
+              </div>
+              <div class="du-sBody">
+                <div class="du-sTag">${u.tag}</div>
+                <div class="du-sName">${u.name}</div>
+                <div class="du-sPrice">${rupiah(u.price)}</div>
+              </div>
+            </a>
+          </div>
+        `).join("");
+
+      // If no similar found
+      if (!simGrid.innerHTML.trim()) {
+        simGrid.innerHTML = `<div class="col-12"><div class="du-empty">Belum ada unit serupa.</div></div>`;
+      }
+    })();
+  </script>
+
+</body>
+</html>

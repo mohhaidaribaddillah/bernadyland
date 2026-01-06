@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cari Perumahan — Bernadyland</title>
+  <meta name="description" content="Cari unit Bernadyland: filter harga, tipe, kamar, fasilitas. Temukan hunian modern & investasi strategis." />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- CSS halaman ini -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+
+<!-- FLOATING NAVBAR -->
+<div class="jm-floatNav-wrap">
+  <nav class="navbar navbar-expand-lg jm-floatNav">
+    <div class="container-fluid px-3 px-lg-4">
+
+      <!-- Brand -->
+      <a class="navbar-brand jm-brand" href="/">
+        <span class="jm-logoWrap">
+          <img src="assets/img/logo-bernadyland.svg" alt="Bernadyland" class="jm-logo"
+               onerror="this.style.display='none'">
+          <!-- fallback kalau logo belum ada -->
+          <span class="jm-logoFallback">B</span>
+        </span>
+        <span class="jm-brandText d-none d-sm-inline">Bernadyland</span>
+      </a>
+
+      <!-- Toggler (mobile) -->
+      <button class="navbar-toggler jm-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#jmFloatNav" aria-controls="jmFloatNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="jmFloatNav">
+        <ul class="navbar-nav jm-navCenter mx-lg-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="cariperumahan.html">Cari Perumahan</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        </ul>
+
+        <!-- CTA -->
+        <div class="jm-navRight ms-lg-3">
+          <a class="btn jm-waBtn" target="_blank" rel="noopener"
+             href="cariperumahan.html">
+            Cari
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+</div>
+
+<!-- HEADER / SEARCH (tanpa container wrapper) -->
+<header
+  class="search-hero"
+  id="top"
+  style="--hero-image:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=2200&q=80');"
+>
+  <div class="search-heroInner">
+  </div>
+</header>
+
+
+
+  <!-- CONTENT -->
+  <main class="page-wrap" id="results">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- FILTER SIDEBAR -->
+        <aside class="col-lg-4 col-xl-3">
+          <div class="filter-card">
+            <div class="filter-head">
+              <div>
+                <div class="kicker">Filter</div>
+                <div class="filter-title">Atur Preferensi</div>
+              </div>
+              <a class="filter-reset" href="#top">Reset</a>
+            </div>
+
+            <form class="filter-form" action="#" method="get">
+              <!-- lokasi -->
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Lokasi</label>
+                <select class="form-select">
+                  <option selected>Semua Lokasi</option>
+                  <option>Dekat Tol / Akses Utama</option>
+                  <option>Dekat Sekolah</option>
+                  <option>Dekat RS / Klinik</option>
+                  <option>Dekat Pusat Belanja</option>
+                </select>
+              </div>
+
+              <!-- harga -->
+              <div class="mb-3">
+                <label class="form-label fw-semibold d-flex justify-content-between">
+                  <span>Budget</span>
+                  <span class="small text-muted">Rp 300jt – 900jt</span>
+                </label>
+                <input type="range" class="form-range" min="300" max="900" value="650" />
+                <div class="small text-muted">Geser untuk estimasi budget (placeholder).</div>
+              </div>
+
+              <!-- tipe -->
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Tipe Unit</label>
+                <div class="row g-2">
+                  <div class="col-6">
+                    <input class="btn-check" type="checkbox" id="tA">
+                    <label class="btn btn-soft w-100" for="tA">Tipe A</label>
+                  </div>
+                  <div class="col-6">
+                    <input class="btn-check" type="checkbox" id="tB">
+                    <label class="btn btn-soft w-100" for="tB">Tipe B</label>
+                  </div>
+                  <div class="col-6">
+                    <input class="btn-check" type="checkbox" id="tC">
+                    <label class="btn btn-soft w-100" for="tC">Tipe C</label>
+                  </div>
+                  <div class="col-6">
+                    <input class="btn-check" type="checkbox" id="tD">
+                    <label class="btn btn-soft w-100" for="tD">Tipe D</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- kamar -->
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Kamar Tidur</label>
+                <select class="form-select">
+                  <option selected>Semua</option>
+                  <option>2 KT</option>
+                  <option>3 KT</option>
+                  <option>4 KT+</option>
+                </select>
+              </div>
+
+              <!-- fasilitas -->
+              <div class="mb-2">
+                <label class="form-label fw-semibold">Fasilitas</label>
+                <div class="check-grid">
+                  <label class="form-check">
+                    <input class="form-check-input" type="checkbox" checked>
+                    <span class="form-check-label">One Gate</span>
+                  </label>
+
+                  <label class="form-check">
+                    <input class="form-check-input" type="checkbox" checked>
+                    <span class="form-check-label">Security 24 Jam</span>
+                  </label>
+
+                  <label class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <span class="form-check-label">Taman</span>
+                  </label>
+
+                  <label class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <span class="form-check-label">Jogging Track</span>
+                  </label>
+
+                  <label class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <span class="form-check-label">Clubhouse</span>
+                  </label>
+
+                  <label class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <span class="form-check-label">Internet Ready</span>
+                  </label>
+                </div>
+              </div>
+
+              <button class="btn btn-accent w-100 mt-3" type="submit">
+                Terapkan Filter
+              </button>
+
+            </form>
+          </div>
+
+          <!-- mini card “out of the box” -->
+          <div class="helper-card mt-3">
+            <div class="fw-black mb-1">Butuh rekomendasi cepat?</div>
+            <div class="text-muted small mb-2">Kirim budget + tipe minat, tim kami pilihin unit yang cocok.</div>
+            <a class="btn btn-accent btn-sm w-100" target="_blank" rel="noopener"
+               href="https://wa.me/628XXXXXXXXXX?text=Halo%20Bernadyland,%20budget%20saya%20Rp%20...%20dan%20minat%20Tipe%20...%20mohon%20rekomendasi.">
+              Minta Rekomendasi
+            </a>
+          </div>
+        </aside>
+
+        <!-- RESULTS -->
+        <section class="col-lg-8 col-xl-9">
+          <div class="result-topbar">
+            <div>
+              <div class="kicker">Hasil</div>
+              <div class="result-title">Menampilkan 8 unit (contoh)</div>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+              <span class="text-muted small d-none d-md-inline">Urutkan:</span>
+              <select class="form-select form-select-sm sort-select" aria-label="Urutkan">
+                <option selected>Rekomendasi</option>
+                <option>Harga: Terendah</option>
+                <option>Harga: Tertinggi</option>
+                <option>Terpopuler</option>
+                <option>Terbaru</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row g-4 mt-1">
+
+            <!-- CARD 1 -->
+            <div class="col-md-6 col-xl-4">
+              <a class="prop-card" href="detail-tipea.html?unit=tipe-a">
+                <div class="prop-media">
+                  <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=1600&q=80" alt="Tipe A Bernadyland" loading="lazy">
+                  <span class="ribbon">HOT</span>
+                  <button class="save-btn" type="button" aria-label="Simpan">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+
+                <div class="prop-body">
+                  <div class="prop-tag">Tipe A • Best Seller</div>
+                  <div class="prop-name">Bernadyland Tipe A</div>
+                  <div class="prop-loc"><i class="bi bi-geo-alt"></i> Dekat akses utama</div>
+
+                  <div class="prop-spec">
+                    <span><i class="bi bi-aspect-ratio"></i> LT 60</span>
+                    <span><i class="bi bi-house"></i> LB 36</span>
+                    <span><i class="bi bi-door-closed"></i> 2 KT</span>
+                    <span><i class="bi bi-droplet"></i> 1 KM</span>
+                  </div>
+
+                  <div class="prop-foot">
+                    <div>
+                      <div class="small text-muted">Mulai dari</div>
+                      <div class="prop-price">Rp 3xx Juta</div>
+                    </div>
+                    <span class="btn btn-accent btn-sm">Detail</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-md-6 col-xl-4">
+              <a class="prop-card" href="detail-tipea.html?unit=tipe-b">
+                <div class="prop-media">
+                  <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1600&q=80" alt="Tipe B Bernadyland" loading="lazy">
+                  <button class="save-btn" type="button" aria-label="Simpan">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+
+                <div class="prop-body">
+                  <div class="prop-tag">Tipe B • Favorit keluarga</div>
+                  <div class="prop-name">Bernadyland Tipe B</div>
+                  <div class="prop-loc"><i class="bi bi-geo-alt"></i> Dekat sekolah & fasilitas</div>
+
+                  <div class="prop-spec">
+                    <span><i class="bi bi-aspect-ratio"></i> LT 72</span>
+                    <span><i class="bi bi-house"></i> LB 45</span>
+                    <span><i class="bi bi-door-closed"></i> 2–3 KT</span>
+                    <span><i class="bi bi-droplet"></i> 2 KM</span>
+                  </div>
+
+                  <div class="prop-foot">
+                    <div>
+                      <div class="small text-muted">Mulai dari</div>
+                      <div class="prop-price">Rp 4xx Juta</div>
+                    </div>
+                    <span class="btn btn-accent btn-sm">Detail</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-md-6 col-xl-4">
+              <a class="prop-card" href="detail-tipea.html?unit=tipe-c">
+                <div class="prop-media">
+                  <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80" alt="Tipe C Bernadyland" loading="lazy">
+                  <span class="pill">Bisa KPR</span>
+                  <button class="save-btn" type="button" aria-label="Simpan">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+
+                <div class="prop-body">
+                  <div class="prop-tag">Tipe C • Ruang lebih lega</div>
+                  <div class="prop-name">Bernadyland Tipe C</div>
+                  <div class="prop-loc"><i class="bi bi-geo-alt"></i> Area berkembang</div>
+
+                  <div class="prop-spec">
+                    <span><i class="bi bi-aspect-ratio"></i> LT 90</span>
+                    <span><i class="bi bi-house"></i> LB 60</span>
+                    <span><i class="bi bi-door-closed"></i> 3 KT</span>
+                    <span><i class="bi bi-droplet"></i> 2 KM</span>
+                  </div>
+
+                  <div class="prop-foot">
+                    <div>
+                      <div class="small text-muted">Mulai dari</div>
+                      <div class="prop-price">Rp 5xx Juta</div>
+                    </div>
+                    <span class="btn btn-accent btn-sm">Detail</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="col-md-6 col-xl-4">
+              <a class="prop-card" href="detail-tipea.html?unit=tipe-d">
+                <div class="prop-media">
+                  <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=80" alt="Tipe D Bernadyland" loading="lazy">
+                  <span class="pill">Bonus Carport</span>
+                  <button class="save-btn" type="button" aria-label="Simpan">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+
+                <div class="prop-body">
+                  <div class="prop-tag">Tipe D • Upgrade tersedia</div>
+                  <div class="prop-name">Bernadyland Tipe D</div>
+                  <div class="prop-loc"><i class="bi bi-geo-alt"></i> Akses mudah</div>
+
+                  <div class="prop-spec">
+                    <span><i class="bi bi-aspect-ratio"></i> LT 84</span>
+                    <span><i class="bi bi-house"></i> LB 54</span>
+                    <span><i class="bi bi-door-closed"></i> 3 KT</span>
+                    <span><i class="bi bi-droplet"></i> 2 KM</span>
+                  </div>
+
+                  <div class="prop-foot">
+                    <div>
+                      <div class="small text-muted">Mulai dari</div>
+                      <div class="prop-price">Rp 6xx Juta</div>
+                    </div>
+                    <span class="btn btn-accent btn-sm">Detail</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="col-md-6 col-xl-4">
+              <a class="prop-card" href="detail-tipea.html?unit=tipe-a-plus">
+                <div class="prop-media">
+                  <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1600&q=80" alt="Tipe A Plus" loading="lazy">
+                  <button class="save-btn" type="button" aria-label="Simpan">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+
+                <div class="prop-body">
+                  <div class="prop-tag">Tipe A+ • Layout fleksibel</div>
+                  <div class="prop-name">Bernadyland Tipe A+</div>
+                  <div class="prop-loc"><i class="bi bi-geo-alt"></i> Dekat fasilitas</div>
+
+                  <div class="prop-spec">
+                    <span><i class="bi bi-aspect-ratio"></i> LT 66</span>
+                    <span><i class="bi bi-house"></i> LB 40</span>
+                    <span><i class="bi bi-door-closed"></i> 2 KT</span>
+                    <span><i class="bi bi-droplet"></i> 1 KM</span>
+                  </div>
+
+                  <div class="prop-foot">
+                    <div>
+                      <div class="small text-muted">Mulai dari</div>
+                      <div class="prop-price">Rp 3xx Juta</div>
+                    </div>
+                    <span class="btn btn-accent btn-sm">Detail</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="col-md-6 col-xl-4">
+              <a class="prop-card" href="detail-tipea.html?unit=tipe-b-plus">
+                <div class="prop-media">
+                  <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80" alt="Tipe B Plus" loading="lazy">
+                  <span class="pill">Legal Jelas</span>
+                  <button class="save-btn" type="button" aria-label="Simpan">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+
+                <div class="prop-body">
+                  <div class="prop-tag">Tipe B+ • Lebih luas</div>
+                  <div class="prop-name">Bernadyland Tipe B+</div>
+                  <div class="prop-loc"><i class="bi bi-geo-alt"></i> Lokasi strategis</div>
+
+                  <div class="prop-spec">
+                    <span><i class="bi bi-aspect-ratio"></i> LT 80</span>
+                    <span><i class="bi bi-house"></i> LB 55</span>
+                    <span><i class="bi bi-door-closed"></i> 3 KT</span>
+                    <span><i class="bi bi-droplet"></i> 2 KM</span>
+                  </div>
+
+                  <div class="prop-foot">
+                    <div>
+                      <div class="small text-muted">Mulai dari</div>
+                      <div class="prop-price">Rp 5xx Juta</div>
+                    </div>
+                    <span class="btn btn-accent btn-sm">Detail</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+
+ 
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Floating WhatsApp (optional kalau sudah ada di layout utama, hapus saja) -->
+  <a class="wa-float"
+     href="https://wa.me/628XXXXXXXXXX?text=Halo%20Bernadyland,%20saya%20mau%20minta%20pricelist%20dan%20jadwal%20survey."
+     target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    <span class="d-none d-md-inline">Chat WhatsApp</span>
+  </a>
+
+  <!-- FOOTER (simple / normal) -->
+<footer class="jm-footerSimple">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+
+      <!-- Brand -->
+      <div class="col-lg-5">
+        <a class="jm-footerBrand" href="index.html" aria-label="Bernadyland">
+          <span class="jm-logoWrap">
+            <img src="assets/img/logo-bernadyland.svg" alt="Bernadyland" class="jm-logo"
+                 onerror="this.style.display='none'">
+            <span class="jm-logoFallback">B</span>
+          </span>
+          <span class="jm-footerBrandText">Bernadyland</span>
+        </a>
+
+        <p class="jm-footerDesc">
+          Perumahan modern dengan lokasi strategis, legalitas jelas, dan skema pembayaran fleksibel.
+          Temukan unit yang cocok lalu hubungi kami untuk pricelist terbaru.
+        </p>
+
+        <div class="jm-footerBtns">
+          <a class="btn jm-footerGhost" target="_blank" rel="noopener"
+             href="https://wa.me/62895369969300?text=Halo%20Bernadyland,%20saya%20mau%20minta%20pricelist%20dan%20jadwal%20survey.">
+            <i class="bi bi-whatsapp me-2"></i> Hubungi Kami
+          </a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="col-6 col-lg-2">
+        <div class="jm-footerTitle">Menu</div>
+        <ul class="jm-footerList">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="cariperumahan.html">Cari Perumahan</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-lg-3">
+        <div class="jm-footerTitle">Kontak</div>
+
+        <ul class="jm-footerInfo">
+          <li><i class="bi bi-geo-alt"></i><span>Lokasi proyek (sesuaikan)</span></li>
+          <li><i class="bi bi-envelope"></i><span>hello@bernadyland.com</span></li>
+        </ul>
+
+        <div class="jm-footerSocial">
+          <a class="jm-soc" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a class="jm-soc" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a class="jm-soc" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a class="jm-soc" target="_blank" rel="noopener"
+             href="https://wa.me/628XXXXXXXXXX?text=Halo%20Bernadyland,%20saya%20mau%20minta%20pricelist."
+             aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="jm-footerBottom">
+      <div>© <span id="jmYear"></span> Bernadyland. All rights reserved.</div>
+      <div class="jm-footerMiniLinks">
+        <a href="about.html">Tentang</a><span>•</span>
+        <a href="blog.html">Blog</a><span>•</span>
+        <a href="cariperumahan.html">Cari Perumahan</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- =========================
+       SCRIPT FINAL (PASTE)
+       ========================= -->
+  <script>
+    (() => {
+      "use strict";
+
+      // =========================================================
+      // DATA INTERNAL (Harga dalam JUTA, lokasi, fasilitas, dll)
+      // Key harus sama dengan query `?unit=...`
+      // =========================================================
+      const PROPERTY_DB = {
+        "tipe-a":      { price: 360, type: "A", beds: 2, baths: 1, location: "Dekat Tol / Akses Utama", facilities: ["One Gate", "Security 24 Jam", "Internet Ready"], popularity: 95, date: "2026-01-03" },
+        "tipe-b":      { price: 460, type: "B", beds: 3, baths: 2, location: "Dekat Sekolah",           facilities: ["One Gate", "Security 24 Jam", "Taman"],          popularity: 88, date: "2026-01-02" },
+        "tipe-c":      { price: 590, type: "C", beds: 3, baths: 2, location: "Dekat RS / Klinik",       facilities: ["One Gate", "Security 24 Jam", "Clubhouse"],      popularity: 84, date: "2026-01-04" },
+        "tipe-d":      { price: 690, type: "D", beds: 3, baths: 2, location: "Dekat Pusat Belanja",     facilities: ["One Gate", "Security 24 Jam", "Jogging Track"],  popularity: 80, date: "2026-01-01" },
+        "tipe-a-plus": { price: 395, type: "A", beds: 2, baths: 1, location: "Dekat Sekolah",           facilities: ["One Gate", "Security 24 Jam", "Taman"],          popularity: 78, date: "2025-12-29" },
+        "tipe-b-plus": { price: 545, type: "B", beds: 3, baths: 2, location: "Dekat Tol / Akses Utama", facilities: ["One Gate", "Security 24 Jam", "Internet Ready"],  popularity: 82, date: "2025-12-30" },
+      };
+
+      // ===== Helpers =====
+      const $ = (sel, root = document) => root.querySelector(sel);
+      const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+      const norm = (s) => (s || "").toString().trim().toLowerCase();
+
+      const parseUnitKeyFromHref = (href) => {
+        try {
+          const u = new URL(href, window.location.origin);
+          return u.searchParams.get("unit") || "";
+        } catch {
+          const m = (href || "").match(/[?&]unit=([^&]+)/i);
+          return m ? decodeURIComponent(m[1]) : "";
+        }
+      };
+
+      const rupiah = (juta) => `Rp ${Number(juta).toLocaleString("id-ID")} Juta`;
+
+      // ===== Elements =====
+      const filterForm = $(".filter-form");
+      const resetBtn = $(".filter-reset");
+      const allSelects = $$(".filter-form select.form-select");
+      const locationSelect = allSelects[0] || null;       // Lokasi
+      const bedroomSelect = allSelects[1] || null;        // Kamar tidur
+      const budgetRange = $('.filter-form input[type="range"].form-range');
+      const typeChecks = ["tA", "tB", "tC", "tD"].map((id) => $("#" + id)).filter(Boolean);
+      const sortSelect = $(".sort-select");
+      const resultTitle = $(".result-title");
+
+      const facilityChecks = $$(".check-grid .form-check-input").map((inp) => {
+        const label = inp.closest("label")?.querySelector(".form-check-label")?.textContent || "";
+        return { inp, label: label.trim() };
+      });
+
+      // ===== Cards =====
+      const cardLinks = $$("#results .prop-card");
+      const cardsMeta = cardLinks.map((a) => {
+        const unitKey = parseUnitKeyFromHref(a.getAttribute("href") || "");
+        const db = PROPERTY_DB[unitKey] || null;
+
+        // fallback type (from tag) if needed
+        const tagText = $(".prop-tag", a)?.textContent || "";
+        const typeFromTag = (tagText.match(/Tipe\s+([A-D])/i) || [])[1] || "";
+
+        const meta = {
+          el: a,
+          col: a.closest(".col-md-6, .col-xl-4") || a.parentElement,
+          unitKey,
+          type: (db?.type || typeFromTag || "").toUpperCase(),
+          price: db?.price ?? null,   // juta
+          beds: db?.beds ?? null,
+          baths: db?.baths ?? null,
+          location: db?.location || ($(".prop-loc", a)?.textContent || ""),
+          facilities: db?.facilities || [],
+          popularity: db?.popularity ?? 0,
+          date: db?.date ? new Date(db.date).getTime() : 0,
+        };
+
+        // Update harga tampilan supaya benar-benar "fungsi"
+        if (meta.price != null) {
+          const priceEl = $(".prop-price", a);
+          if (priceEl) priceEl.textContent = rupiah(meta.price);
+        }
+
+        // Attach dataset for quick sort/filter
+        a.dataset.unit = meta.unitKey;
+        a.dataset.type = meta.type;
+        if (meta.price != null) a.dataset.price = String(meta.price);
+        if (meta.beds != null) a.dataset.beds = String(meta.beds);
+        a.dataset.location = meta.location;
+        a.dataset.popularity = String(meta.popularity);
+        a.dataset.date = String(meta.date);
+
+        return meta;
+      });
+
+      // ===== Heart / Save button (no navigation) =====
+      $$("#results .save-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const icon = btn.querySelector("i");
+          btn.classList.toggle("is-saved");
+          if (icon) {
+            icon.classList.toggle("bi-heart");
+            icon.classList.toggle("bi-heart-fill");
+          }
+        });
+      });
+
+      // ===== Budget label update (uses existing small text) =====
+      const updateBudgetLabel = () => {
+        if (!budgetRange) return;
+        const label = budgetRange.closest(".mb-3")?.querySelector(".form-label .small.text-muted");
+        if (label) label.textContent = `Maks Rp ${Number(budgetRange.value).toLocaleString("id-ID")}jt`;
+      };
+
+      // ===== Read filters =====
+      const getFilters = () => {
+        const loc = locationSelect ? locationSelect.value : "Semua Lokasi";
+        const maxBudget = budgetRange ? Number(budgetRange.value) : null;
+
+        const types = typeChecks
+          .filter((c) => c && c.checked)
+          .map((c) => (c.id || "").replace("t", "").toUpperCase()); // tA => A
+
+        let beds = null;
+        if (bedroomSelect) {
+          const v = bedroomSelect.value;
+          if (/2\s*KT/i.test(v)) beds = 2;
+          else if (/3\s*KT/i.test(v)) beds = 3;
+          else if (/4\s*KT\+/i.test(v) || /4\s*KT/i.test(v)) beds = 4; // >=4
+        }
+
+        const facs = facilityChecks
+          .filter((x) => x.inp.checked)
+          .map((x) => x.label);
+
+        const sort = sortSelect ? sortSelect.value : "Rekomendasi";
+
+        return { loc, maxBudget, types, beds, facs, sort };
+      };
+
+      // ===== Match logic =====
+      const matchCard = (meta, f) => {
+        // lokasi
+        if (f.loc && norm(f.loc) !== "semua lokasi") {
+          if (!norm(meta.location).includes(norm(f.loc))) return false;
+        }
+
+        // budget = maksimum harga (juta)
+        if (f.maxBudget != null && meta.price != null) {
+          if (meta.price > f.maxBudget) return false;
+        }
+
+        // tipe (A/B/C/D)
+        if (f.types.length) {
+          if (!f.types.includes(meta.type)) return false;
+        }
+
+        // kamar tidur
+        if (f.beds != null && meta.beds != null) {
+          if (f.beds >= 4) {
+            if (meta.beds < 4) return false;
+          } else {
+            if (meta.beds !== f.beds) return false;
+          }
+        }
+
+        // fasilitas (AND)
+        if (f.facs.length) {
+          const set = new Set(meta.facilities.map((x) => norm(x)));
+          for (const fac of f.facs) {
+            if (!set.has(norm(fac))) return false;
+          }
+        }
+
+        return true;
+      };
+
+      // ===== Sorting =====
+      const sortCards = (metas, sortValue) => {
+        const v = norm(sortValue);
+
+        if (v.includes("rekomendasi")) {
+          return metas.sort((a, b) => (b.popularity - a.popularity) || ((a.price ?? 999999) - (b.price ?? 999999)));
+        }
+        if (v.includes("harga: terendah")) {
+          return metas.sort((a, b) => (a.price ?? 999999) - (b.price ?? 999999));
+        }
+        if (v.includes("harga: tertinggi")) {
+          return metas.sort((a, b) => (b.price ?? -1) - (a.price ?? -1));
+        }
+        if (v.includes("terpopuler")) {
+          return metas.sort((a, b) => (b.popularity - a.popularity));
+        }
+        if (v.includes("terbaru")) {
+          return metas.sort((a, b) => (b.date - a.date));
+        }
+        return metas;
+      };
+
+      // ===== Apply + render =====
+      const applyFilters = () => {
+        const f = getFilters();
+        const visible = [];
+        const hidden = [];
+
+        cardsMeta.forEach((meta) => {
+          const ok = matchCard(meta, f);
+          if (ok) visible.push(meta);
+          else hidden.push(meta);
+        });
+
+        const sorted = sortCards(visible.slice(), f.sort);
+
+        // reorder DOM based on sorted visible
+        const gridRow = $("#results .row.g-4.mt-1");
+        if (gridRow) {
+          sorted.forEach((m) => gridRow.appendChild(m.col));
+          hidden.forEach((m) => gridRow.appendChild(m.col));
+        }
+
+        // show/hide
+        sorted.forEach((m) => (m.col.style.display = ""));
+        hidden.forEach((m) => (m.col.style.display = "none"));
+
+        // update counter
+        if (resultTitle) {
+          resultTitle.textContent = `Menampilkan ${sorted.length} unit`;
+        }
+      };
+
+      // ===== Reset =====
+      const resetFilters = () => {
+        // selects
+        if (locationSelect) locationSelect.selectedIndex = 0;
+        if (bedroomSelect) bedroomSelect.selectedIndex = 0;
+
+        // range
+        if (budgetRange) {
+          budgetRange.value = budgetRange.getAttribute("value") || budgetRange.max || "900";
+          updateBudgetLabel();
+        }
+
+        // types
+        typeChecks.forEach((c) => (c.checked = false));
+
+        // facilities back to initial HTML "checked" attribute
+        facilityChecks.forEach(({ inp }) => {
+          inp.checked = inp.hasAttribute("checked");
+        });
+
+        // sort
+        if (sortSelect) sortSelect.selectedIndex = 0;
+
+        applyFilters();
+      };
+
+      // ===== Events =====
+      if (filterForm) {
+        filterForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          applyFilters();
+          document.getElementById("results")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+
+        filterForm.addEventListener("change", () => {
+          updateBudgetLabel();
+          applyFilters();
+        });
+
+        budgetRange?.addEventListener("input", () => {
+          updateBudgetLabel();
+          applyFilters();
+        });
+      }
+
+      sortSelect?.addEventListener("change", applyFilters);
+
+      resetBtn?.addEventListener("click", (e) => {
+        e.preventDefault();
+        resetFilters();
+      });
+
+      // ===== Init =====
+      updateBudgetLabel();
+      applyFilters();
+    })();
+  </script>
+</body>
+</html>

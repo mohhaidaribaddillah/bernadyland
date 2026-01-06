@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Bernadyland</title>
+  <meta name="description" content="Blog Bernadyland: tips membeli rumah, investasi properti, dan update promo perumahan." />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR FLOATING -->
+  <div class="jm-floatNav-wrap">
+    <nav class="navbar navbar-expand-lg jm-floatNav">
+      <div class="container-fluid px-3 px-lg-4">
+
+        <a class="navbar-brand jm-brand" href="/">
+          <span class="jm-logoWrap">
+            <img src="assets/img/logo-bernadyland.svg" alt="Bernadyland" class="jm-logo"
+                 onerror="this.style.display='none'">
+            <span class="jm-logoFallback">B</span>
+          </span>
+          <span class="jm-brandText d-none d-sm-inline">Bernadyland</span>
+        </a>
+
+        <button class="navbar-toggler jm-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#jmFloatNav" aria-controls="jmFloatNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="jmFloatNav">
+          <ul class="navbar-nav jm-navCenter mx-lg-auto gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="cariperumahan.html">Cari Perumahan</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="blog.html" aria-current="page">Blog</a></li>
+          </ul>
+
+          <div class="jm-navRight ms-lg-3">
+            <a class="btn jm-waBtn" href="cariperumahan.html">
+              Cari
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+
+  <!-- BLOG HERO -->
+  <header
+    class="blog-hero"
+    style="--hero-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=2200&q=80');"
+  >
+    <div class="container">
+      <div class="blog-heroInner">
+        <h1 class="blog-heroTitle">Insight Properti</h1>
+
+        <!-- Search -->
+        <form class="blog-search" id="blogSearchForm" autocomplete="off">
+          <i class="bi bi-search blog-searchIco" aria-hidden="true"></i>
+          <input
+            id="blogSearchInput"
+            class="form-control blog-searchInput"
+            type="search"
+            placeholder="Cari artikel... (contoh: KPR, investasi, legalitas)"
+            aria-label="Cari artikel"
+          />
+          <button class="btn btn-accent blog-searchBtn" type="submit">Cari</button>
+        </form>
+
+        <!-- Chips -->
+        <div class="blog-chips mt-3" role="list">
+          <button type="button" class="chip chip-filter is-active" data-tag="all"><i class="bi bi-grid"></i> Semua</button>
+          <button type="button" class="chip chip-filter" data-tag="tips"><i class="bi bi-lightbulb"></i> Tips</button>
+          <button type="button" class="chip chip-filter" data-tag="kpr"><i class="bi bi-bank"></i> KPR</button>
+          <button type="button" class="chip chip-filter" data-tag="investasi"><i class="bi bi-graph-up-arrow"></i> Investasi</button>
+          <button type="button" class="chip chip-filter" data-tag="legalitas"><i class="bi bi-shield-check"></i> Legalitas</button>
+          <button type="button" class="chip chip-filter" data-tag="promo"><i class="bi bi-tags"></i> Promo</button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="blog-wrap" id="blogTop">
+    <div class="container py-5">
+
+      <!-- FEATURED + SIDEBAR -->
+      <div class="row g-4">
+        <div class="col-lg-8">
+
+          <!-- Featured -->
+          <a class="blog-featured" href="blog-detail.html?slug=ceklist-beli-rumah-pertama" data-title="Checklist beli rumah pertama" data-tags="tips,legalitas,kpr">
+            <div class="blog-featuredMedia">
+              <img
+                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=2200&q=80"
+                alt="Checklist beli rumah pertama"
+                loading="lazy"
+              />
+              <span class="blog-badge">Featured</span>
+            </div>
+            <div class="blog-featuredBody">
+              <div class="blog-meta">
+                <span class="blog-tag">Tips</span>
+                <span class="dot">•</span>
+                <span class="blog-date">Update: Januari 2026</span>
+              </div>
+              <h2 class="blog-title">Checklist Beli Rumah Pertama: Biar Nggak Salah Langkah</h2>
+              <p class="blog-excerpt">
+                Mulai dari budget, lokasi, legalitas, sampai simulasi cicilan. Ini daftar singkat yang wajib kamu cek sebelum booking unit.
+              </p>
+            </div>
+          </a>
+
+        </div>
+
+        <aside class="col-lg-4">
+          <div class="blog-sideCard">
+            <div class="kicker">CTA CEPAT</div>
+            <div class="blog-sideTitle">Mau rekomendasi unit sesuai budget?</div>
+            <div class="blog-sideDesc">
+              Kirim budget + tipe minat. Tim Bernadyland bantu pilihkan unit yang cocok.
+            </div>
+            <a class="btn btn-accent w-100" target="_blank" rel="noopener"
+               href="https://wa.me/62895369969300?text=Halo%20Bernadyland,%20budget%20saya%20Rp%20...%20dan%20minat%20Tipe%20...%20mohon%20rekomendasi.">
+              Hubungi via WhatsApp
+            </a>
+          </div>
+
+          <div class="blog-sideCard mt-3">
+            <div class="kicker">TOPIK POPULER</div>
+            <div class="blog-topicList">
+              <button type="button" class="topic-link" data-tag="kpr"><i class="bi bi-bank"></i> Cara KPR yang aman</button>
+              <button type="button" class="topic-link" data-tag="legalitas"><i class="bi bi-shield-check"></i> Cek legalitas</button>
+              <button type="button" class="topic-link" data-tag="investasi"><i class="bi bi-graph-up-arrow"></i> Investasi</button>
+              <button type="button" class="topic-link" data-tag="promo"><i class="bi bi-tags"></i> Promo</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- LIST -->
+      <div class="d-flex align-items-end justify-content-between gap-3 mt-5">
+        <div>
+          <div class="kicker">ARTIKEL</div>
+          <h2 class="blog-sectionTitle mb-0">Artikel Terbaru</h2>
+        </div>
+
+        <div class="blog-sortWrap">
+          <label class="small text-muted me-2 d-none d-md-inline">Urutkan:</label>
+          <select class="form-select form-select-sm blog-sort" id="blogSort">
+            <option value="new" selected>Terbaru</option>
+            <option value="old">Terlama</option>
+            <option value="az">Judul A–Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-2" id="blogGrid">
+
+        <!-- Card 1 -->
+        <div class="col-md-6 col-xl-4 blog-item"
+             data-title="Cara menentukan budget rumah yang aman"
+             data-tags="tips"
+             data-date="2026-01-01">
+          <a class="blog-card" href="blog-detail.html?slug=budget-rumah-aman">
+            <div class="blog-media">
+              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80" alt="Budget rumah aman" loading="lazy">
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-tag">Tips</span>
+                <span class="dot">•</span>
+                <span class="blog-date">1 Jan 2026</span>
+              </div>
+              <div class="blog-cardTitle">Cara Menentukan Budget Rumah yang Aman</div>
+              <div class="blog-cardDesc">Panduan singkat supaya cicilan tetap nyaman tanpa mengorbankan kebutuhan lain.</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6 col-xl-4 blog-item"
+             data-title="Simulasi KPR: yang wajib kamu pahami sebelum tanda tangan"
+             data-tags="kpr"
+             data-date="2025-12-22">
+          <a class="blog-card" href="blog-detail.html?slug=simulasi-kpr-wajib-paham">
+            <div class="blog-media">
+              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1600&q=80" alt="Simulasi KPR" loading="lazy">
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-tag">KPR</span>
+                <span class="dot">•</span>
+                <span class="blog-date">22 Des 2025</span>
+              </div>
+              <div class="blog-cardTitle">Simulasi KPR: Yang Wajib Kamu Pahami</div>
+              <div class="blog-cardDesc">Suku bunga, tenor, DP, dan biaya lain yang sering bikin kaget kalau nggak disiapkan.</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6 col-xl-4 blog-item"
+             data-title="Legalitas rumah: cek SHM, HGB, PBG dengan cara sederhana"
+             data-tags="legalitas"
+             data-date="2025-12-10">
+          <a class="blog-card" href="blog-detail.html?slug=cek-legalitas-rumah">
+            <div class="blog-media">
+              <img src="https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?auto=format&fit=crop&w=1600&q=80" alt="Legalitas rumah" loading="lazy">
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-tag">Legalitas</span>
+                <span class="dot">•</span>
+                <span class="blog-date">10 Des 2025</span>
+              </div>
+              <div class="blog-cardTitle">Legalitas Rumah: Cara Cek yang Paling Sederhana</div>
+              <div class="blog-cardDesc">Biar aman, ini poin dokumen yang sebaiknya kamu tanya sebelum booking.</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-6 col-xl-4 blog-item"
+             data-title="Investasi rumah: kapan waktu terbaik untuk beli?"
+             data-tags="investasi"
+             data-date="2025-11-29">
+          <a class="blog-card" href="blog-detail.html?slug=waktu-terbaik-beli-rumah">
+            <div class="blog-media">
+              <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80" alt="Investasi rumah" loading="lazy">
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-tag">Investasi</span>
+                <span class="dot">•</span>
+                <span class="blog-date">29 Nov 2025</span>
+              </div>
+              <div class="blog-cardTitle">Investasi Rumah: Kapan Waktu Terbaik untuk Beli?</div>
+              <div class="blog-cardDesc">Faktor lokasi, akses, demand sewa, dan timing promo yang sering bikin beda.</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-6 col-xl-4 blog-item"
+             data-title="Promo perumahan: cara ambil promo tanpa terburu-buru"
+             data-tags="promo,tips"
+             data-date="2025-11-14">
+          <a class="blog-card" href="blog-detail.html?slug=ambil-promo-tanpa-salah">
+            <div class="blog-media">
+              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80" alt="Promo perumahan" loading="lazy">
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-tag">Promo</span>
+                <span class="dot">•</span>
+                <span class="blog-date">14 Nov 2025</span>
+              </div>
+              <div class="blog-cardTitle">Promo Perumahan: Cara Ambil Promo Tanpa Salah</div>
+              <div class="blog-cardDesc">Promo itu menarik, tapi tetap harus cek detailnya biar aman.</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-6 col-xl-4 blog-item"
+             data-title="Pilih tipe unit: A, B, C, D mana yang cocok?"
+             data-tags="tips"
+             data-date="2025-10-28">
+          <a class="blog-card" href="blog-detail.html?slug=pilih-tipe-unit">
+            <div class="blog-media">
+              <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=80" alt="Pilih tipe unit" loading="lazy">
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-tag">Tips</span>
+                <span class="dot">•</span>
+                <span class="blog-date">28 Okt 2025</span>
+              </div>
+              <div class="blog-cardTitle">Pilih Tipe Unit: A, B, C, D Mana yang Cocok?</div>
+              <div class="blog-cardDesc">Cara cepat menyesuaikan luas tanah, kamar, dan kebutuhan keluarga.</div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Empty state -->
+      <div class="blog-empty mt-4 d-none" id="blogEmpty">
+        <div class="blog-emptyCard">
+          <div class="blog-emptyTitle">Artikel tidak ditemukan</div>
+          <div class="text-muted">Coba kata kunci lain atau pilih kategori berbeda.</div>
+          <button type="button" class="btn btn-accent mt-3" id="blogClearBtn">Reset Pencarian</button>
+        </div>
+      </div>
+
+      <!-- CTA Bawah -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-box"
+      style="--cta-image:url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1800&q=80');"
+    >
+      <div class="cta-content">
+        <div class="kicker text-white-50">CALL TO ACTION</div>
+        <h2 class="cta-title">Mau Pricelist & Jadwal Survey?</h2>
+        <p class="cta-sub">Klik tombol di bawah. Tim Bernadyland akan respon cepat via WhatsApp.</p>
+
+        <a class="btn btn-accent btn-lg" target="_blank" rel="noopener"
+           href="https://wa.me/62895369969300?text=Halo%20Bernadyland,%20saya%20mau%20minta%20pricelist%20dan%20jadwal%20survey.">
+          Hubungi Kami
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </div>
+  </main>
+
+  <!-- Floating WhatsApp -->
+  <a class="wa-float"
+     href="https://wa.me/62895369969300?text=Halo%20Bernadyland,%20saya%20mau%20tanya%20info%20perumahan."
+     target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+    <span class="d-none d-md-inline">Chat WhatsApp</span>
+  </a>
+
+  <!-- FOOTER (simple / normal) -->
+<footer class="jm-footerSimple">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+
+      <!-- Brand -->
+      <div class="col-lg-5">
+        <a class="jm-footerBrand" href="index.html" aria-label="Bernadyland">
+          <span class="jm-logoWrap">
+            <img src="assets/img/logo-bernadyland.svg" alt="Bernadyland" class="jm-logo"
+                 onerror="this.style.display='none'">
+            <span class="jm-logoFallback">B</span>
+          </span>
+          <span class="jm-footerBrandText">Bernadyland</span>
+        </a>
+
+        <p class="jm-footerDesc">
+          Perumahan modern dengan lokasi strategis, legalitas jelas, dan skema pembayaran fleksibel.
+          Temukan unit yang cocok lalu hubungi kami untuk pricelist terbaru.
+        </p>
+
+        <div class="jm-footerBtns">
+          <a class="btn jm-footerGhost" target="_blank" rel="noopener"
+             href="https://wa.me/62895369969300?text=Halo%20Bernadyland,%20saya%20mau%20minta%20pricelist%20dan%20jadwal%20survey.">
+            <i class="bi bi-whatsapp me-2"></i> Hubungi Kami
+          </a>
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="col-6 col-lg-2">
+        <div class="jm-footerTitle">Menu</div>
+        <ul class="jm-footerList">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="cariperumahan.html">Cari Perumahan</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-lg-3">
+        <div class="jm-footerTitle">Kontak</div>
+
+        <ul class="jm-footerInfo">
+          <li><i class="bi bi-geo-alt"></i><span>Lokasi proyek (sesuaikan)</span></li>
+          <li><i class="bi bi-envelope"></i><span>hello@bernadyland.com</span></li>
+        </ul>
+
+        <div class="jm-footerSocial">
+          <a class="jm-soc" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a class="jm-soc" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a class="jm-soc" href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a class="jm-soc" target="_blank" rel="noopener"
+             href="https://wa.me/628XXXXXXXXXX?text=Halo%20Bernadyland,%20saya%20mau%20minta%20pricelist."
+             aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="jm-footerBottom">
+      <div>© <span id="jmYear"></span> Bernadyland. All rights reserved.</div>
+      <div class="jm-footerMiniLinks">
+        <a href="about.html">Tentang</a><span>•</span>
+        <a href="blog.html">Blog</a><span>•</span>
+        <a href="cariperumahan.html">Cari Perumahan</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- BLOG SCRIPT (search + filter + sort) -->
+  <script>
+    (function(){
+      const qInput = document.getElementById('blogSearchInput');
+      const form = document.getElementById('blogSearchForm');
+      const grid = document.getElementById('blogGrid');
+      const items = Array.from(grid.querySelectorAll('.blog-item'));
+      const empty = document.getElementById('blogEmpty');
+      const clearBtn = document.getElementById('blogClearBtn');
+      const sortSel = document.getElementById('blogSort');
+
+      const chipFilters = Array.from(document.querySelectorAll('.chip-filter'));
+      const topicLinks = Array.from(document.querySelectorAll('.topic-link'));
+
+      let activeTag = 'all';
+      let query = '';
+
+      function normalize(s){
+        return (s || '').toLowerCase().trim();
+      }
+
+      function matchesTag(item){
+        if(activeTag === 'all') return true;
+        const tags = (item.getAttribute('data-tags') || '').split(',').map(t => normalize(t));
+        return tags.includes(activeTag);
+      }
+
+      function matchesQuery(item){
+        if(!query) return true;
+        const title = normalize(item.getAttribute('data-title'));
+        const tags  = normalize(item.getAttribute('data-tags'));
+        return title.includes(query) || tags.includes(query);
+      }
+
+      function applyVisibility(){
+        let shown = 0;
+        items.forEach(it => {
+          const ok = matchesTag(it) && matchesQuery(it);
+          it.classList.toggle('d-none', !ok);
+          if(ok) shown++;
+        });
+        empty.classList.toggle('d-none', shown !== 0);
+      }
+
+      function applySort(){
+        const mode = sortSel.value;
+        const visible = items.filter(it => !it.classList.contains('d-none'));
+
+        visible.sort((a,b) => {
+          const aTitle = normalize(a.getAttribute('data-title'));
+          const bTitle = normalize(b.getAttribute('data-title'));
+          const aDate  = new Date(a.getAttribute('data-date'));
+          const bDate  = new Date(b.getAttribute('data-date'));
+
+          if(mode === 'az') return aTitle.localeCompare(bTitle, 'id');
+          if(mode === 'old') return aDate - bDate;
+          return bDate - aDate; // new
+        });
+
+        // Re-append only visible items first (tetap menjaga layout)
+        visible.forEach(it => grid.appendChild(it));
+      }
+
+      function setActiveChip(tag){
+        activeTag = tag;
+        chipFilters.forEach(btn => btn.classList.toggle('is-active', btn.dataset.tag === tag));
+        applyVisibility();
+        applySort();
+        grid.scrollIntoView({behavior: 'smooth', block: 'start'});
+      }
+
+      // Search submit
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        query = normalize(qInput.value);
+        applyVisibility();
+        applySort();
+      });
+
+      // Live search
+      qInput.addEventListener('input', () => {
+        query = normalize(qInput.value);
+        applyVisibility();
+        applySort();
+      });
+
+      // Chips filter
+      chipFilters.forEach(btn => {
+        btn.addEventListener('click', () => setActiveChip(normalize(btn.dataset.tag)));
+      });
+
+      // Topic shortcuts
+      topicLinks.forEach(btn => {
+        btn.addEventListener('click', () => setActiveChip(normalize(btn.dataset.tag)));
+      });
+
+      // Sort
+      sortSel.addEventListener('change', () => applySort());
+
+      // Reset
+      clearBtn.addEventListener('click', () => {
+        qInput.value = '';
+        query = '';
+        setActiveChip('all');
+      });
+
+      // Init
+      applyVisibility();
+      applySort();
+    })();
+  </script>
+</body>
+</html>
