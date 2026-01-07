@@ -2768,3 +2768,54 @@ body{ background: var(--bg); color: var(--text); }
     margin-right: auto;
   }
 }
+
+
+/* =========================================================
+   FONT STANDAR (ID) — FINAL OVERRIDE (TEMPel PALING BAWAH)
+   ========================================================= */
+
+/* 1) Definisikan font stack yang aman & konsisten */
+:root{
+  --font-sans: "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: "Noto Serif", Georgia, "Times New Roman", serif;
+
+  /* Bootstrap hook (kalau kamu pakai Bootstrap 5) */
+  --bs-body-font-family: var(--font-sans);
+}
+
+/* 2) Paksa semua teks default ikut font */
+html, body{
+  font-family: var(--font-sans) !important;
+  text-rendering: optimizeLegibility;
+}
+
+/* 3) Paksa semua elemen umum ikut font (biar gak ketimpa) */
+*,
+*::before,
+*::after{
+  font-family: inherit;
+}
+
+/* 4) Komponen form & button sering punya font sendiri — paksa inherit */
+button, input, select, textarea,
+.form-control, .form-select, .btn,
+.navbar, .nav-link, .dropdown-menu, .dropdown-item,
+.accordion, .accordion-button,
+.modal, .offcanvas, .toast,
+.badge, .breadcrumb, .pagination,
+.card, .card-body{
+  font-family: var(--font-sans) !important;
+}
+
+/* 5) Judul dibuat lebih “formal” (opsional). 
+   Kalau mau semua judul serif, biarkan begini.
+   Kalau tidak mau serif, hapus blok ini. */
+h1, h2, h3, .hero-title, .section-title, .h2-dark, .du-title, .blog-heroTitle{
+  font-family: var(--font-serif) !important;
+  letter-spacing: -0.02em;
+}
+
+/* 6) Angka/tabular (opsional) — bikin harga/angka lebih rapi */
+.unit-price, .prop-price, .du-priceMain, .stat-num{
+  font-variant-numeric: tabular-nums;
+}
