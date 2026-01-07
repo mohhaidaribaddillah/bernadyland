@@ -12,48 +12,58 @@
 
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800;900&family=Noto+Serif:wght@600;700;800;900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-  <!-- NAVBAR FLOATING -->
-  <div class="jm-floatNav-wrap">
-    <nav class="navbar navbar-expand-lg jm-floatNav">
-      <div class="container-fluid px-3 px-lg-4">
+<!-- FLOATING NAVBAR -->
+<div class="jm-floatNav-wrap">
+  <nav class="navbar navbar-expand-lg jm-floatNav">
+    <div class="container-fluid px-3 px-lg-4">
 
-        <a class="navbar-brand jm-brand" href="/">
-          <span class="jm-logoWrap">
-            <img src="assets/img/logo-bernadyland.svg" alt="Bernadyland" class="jm-logo"
-                 onerror="this.style.display='none'">
-            <span class="jm-logoFallback">B</span>
-          </span>
-          <span class="jm-brandText d-none d-sm-inline">Bernadyland</span>
-        </a>
+      <!-- Brand -->
+      <a class="navbar-brand jm-brand" href="/">
+        <span class="jm-logoWrap">
+          <img src="assets/img/logo-bernadyland.svg" alt="Bernadyland" class="jm-logo"
+               onerror="this.style.display='none'">
+          <!-- fallback kalau logo belum ada -->
+          <span class="jm-logoFallback">B</span>
+        </span>
+        <span class="jm-brandText d-none d-sm-inline">Bernadyland</span>
+      </a>
 
-        <button class="navbar-toggler jm-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#jmFloatNav" aria-controls="jmFloatNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- Toggler (mobile) -->
+      <button class="navbar-toggler jm-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#jmFloatNav" aria-controls="jmFloatNav" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="collapse navbar-collapse" id="jmFloatNav">
-          <ul class="navbar-nav jm-navCenter mx-lg-auto gap-lg-1">
-            <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-            <li class="nav-item"><a class="nav-link" href="cariperumahan.html">Cari Perumahan</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link active" href="blog.html" aria-current="page">Blog</a></li>
-          </ul>
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="jmFloatNav">
+        <ul class="navbar-nav jm-navCenter mx-lg-auto gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="cariperumahan.html">Cari Perumahan</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        </ul>
 
-          <div class="jm-navRight ms-lg-3">
-            <a class="btn jm-waBtn" href="cariperumahan.html">
-              Cari
-            </a>
-          </div>
+        <!-- CTA -->
+        <div class="jm-navRight ms-lg-3">
+          <a class="btn jm-waBtn" target="_blank" rel="noopener"
+             href="https://wa.me/62895369969300?text=Halo%20Bernadyland,%20Saya%20ingin%20%20bertanya.">
+            Pusat Bantuan
+          </a>
         </div>
-
       </div>
-    </nav>
-  </div>
+
+    </div>
+  </nav>
+</div>
 
   <!-- BLOG HERO -->
   <header
@@ -294,6 +304,69 @@
           </a>
         </div>
 
+                <!-- Card 4 -->
+        <div class="col-md-6 col-xl-4 blog-item"
+             data-title="Investasi rumah: kapan waktu terbaik untuk beli?"
+             data-tags="investasi"
+             data-date="2025-11-29">
+          <a class="blog-card" href="blog-detail.html?slug=waktu-terbaik-beli-rumah">
+            <div class="blog-media">
+              <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80" alt="Investasi rumah" loading="lazy">
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-tag">Investasi</span>
+                <span class="dot">•</span>
+                <span class="blog-date">29 Nov 2025</span>
+              </div>
+              <div class="blog-cardTitle">Investasi Rumah: Kapan Waktu Terbaik untuk Beli?</div>
+              <div class="blog-cardDesc">Faktor lokasi, akses, demand sewa, dan timing promo yang sering bikin beda.</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-md-6 col-xl-4 blog-item"
+             data-title="Promo perumahan: cara ambil promo tanpa terburu-buru"
+             data-tags="promo,tips"
+             data-date="2025-11-14">
+          <a class="blog-card" href="blog-detail.html?slug=ambil-promo-tanpa-salah">
+            <div class="blog-media">
+              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80" alt="Promo perumahan" loading="lazy">
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-tag">Promo</span>
+                <span class="dot">•</span>
+                <span class="blog-date">14 Nov 2025</span>
+              </div>
+              <div class="blog-cardTitle">Promo Perumahan: Cara Ambil Promo Tanpa Salah</div>
+              <div class="blog-cardDesc">Promo itu menarik, tapi tetap harus cek detailnya biar aman.</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-md-6 col-xl-4 blog-item"
+             data-title="Pilih tipe unit: A, B, C, D mana yang cocok?"
+             data-tags="tips"
+             data-date="2025-10-28">
+          <a class="blog-card" href="blog-detail.html?slug=pilih-tipe-unit">
+            <div class="blog-media">
+              <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=80" alt="Pilih tipe unit" loading="lazy">
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta">
+                <span class="blog-tag">Tips</span>
+                <span class="dot">•</span>
+                <span class="blog-date">28 Okt 2025</span>
+              </div>
+              <div class="blog-cardTitle">Pilih Tipe Unit: A, B, C, D Mana yang Cocok?</div>
+              <div class="blog-cardDesc">Cara cepat menyesuaikan luas tanah, kamar, dan kebutuhan keluarga.</div>
+            </div>
+          </a>
+        </div>
+
       </div>
 
       <!-- Empty state -->
@@ -399,12 +472,6 @@
 
     <div class="jm-footerBottom">
       <div>© <span id="jmYear"></span> Bernadyland. All rights reserved.</div>
-      <div class="jm-footerMiniLinks">
-        <a href="about.html">Tentang</a><span>•</span>
-        <a href="blog.html">Blog</a><span>•</span>
-        <a href="cariperumahan.html">Cari Perumahan</a>
-      </div>
-    </div>
   </div>
 </footer>
 
