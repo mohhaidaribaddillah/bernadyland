@@ -1,3 +1,18 @@
+/* FORCE FONT GLOBAL (taruh paling bawah main.css) */
+:root{
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+  --bs-body-font-family: var(--font-sans);
+}
+
+body{
+  font-family: var(--font-sans) !important;
+}
+
+button, input, select, textarea{
+  font-family: inherit !important;
+}
+
+
 :root{
   --accent: #1f4fff;
   --accent2:#0b2bd6;
@@ -201,10 +216,12 @@ section[id]{
 
 /* HERO background (gambar asli, tanpa overlay) */
 .hero-bg{
-  --hero-image: none;
   position: relative;
-  background: var(--hero-image) center/cover no-repeat; /* asli */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 
 /* tinggi hero seperti landing page */
 .hero-content{
@@ -2703,3 +2720,51 @@ body{ background: var(--bg); color: var(--text); }
 }
 .jm-footerMiniLinks a:hover{ color: var(--accent2); }
 .jm-footerMiniLinks span{ opacity: .5; }
+
+/* ========= REVISI INDEX ========= */
+
+/* 1) Scroll hint di tengah */
+.scroll-hint{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 18px;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(11,18,32,.35);
+  border: 1px solid rgba(255,255,255,.18);
+  z-index: 2;
+}
+.scroll-hint:hover{ filter: brightness(1.05); color: #fff; }
+
+/* Pastikan hero-content relatif agar posisi absolute scroll-hint ngikut hero */
+.hero-content{
+  position: relative;
+}
+
+/* 3) Mobile tidak mepet kanan-kiri (tanpa ubah struktur HTML) */
+@media (max-width: 576px){
+  /* Bootstrap container default kadang terasa mepet,
+     kita tambahin padding kiri-kanan khusus mobile */
+  .container{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Hero juga kasih padding aman */
+  .hero-content{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Kartu hero biar tidak mentok */
+  .hero-card{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
