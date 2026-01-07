@@ -378,6 +378,246 @@
         </div>
       </div>
 
+      <!-- Pagination -->
+<nav class="blog-pagination d-flex justify-content-center" aria-label="Pagination Blog">
+  <ul class="pagination jm-pagination mb-0" id="blogPager">
+    <li class="page-item" id="blogPrev">
+      <a class="page-link" href="#" aria-label="Sebelumnya">
+        <span aria-hidden="true">‹</span> Prev
+      </a>
+    </li>
+
+    <li class="page-item disabled">
+      <span class="page-link" id="blogPageInfo">Halaman 1 / 1</span>
+    </li>
+
+    <li class="page-item" id="blogNext">
+      <a class="page-link" href="#" aria-label="Berikutnya">
+        Next <span aria-hidden="true">›</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  /* ============================
+   BLOG PAGINATION SPACING
+   ============================ */
+
+/* jarak atas-bawah pagination */
+.blog-pagination{
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+/* kalau empty state muncul, kasih jarak juga */
+.blog-empty{
+  margin-bottom: 18px;
+}
+
+/* rapihin pagination biar enak dilihat */
+.blog-pagination .pagination{
+  gap: 10px; /* jarak antar item */
+}
+
+/* prev/next lebih “pill” dan konsisten */
+.blog-pagination .page-link{
+  padding: .55rem 1rem;
+  border-radius: 999px !important;
+}
+
+/* tombol disabled tetap kelihatan rapih */
+.blog-pagination .page-item.disabled .page-link{
+  opacity: .55;
+  pointer-events: none;
+}
+
+/* info halaman (Halaman x/y) */
+.blog-pagination #blogPageInfo{
+  border-radius: 999px !important;
+  font-weight: 900;
+  color: rgba(11,18,32,.70);
+  background: rgba(255,255,255,.92);
+}
+
+/* =========================================
+   BLOG — MOBILE RESPONSIVE (<=576px)
+   ========================================= */
+@media (max-width: 576px){
+
+  /* ===== HERO ===== */
+  .blog-hero{
+    padding: 64px 0 26px;
+    margin-top: 10px;
+  }
+  .blog-heroInner{
+    padding-top: 46px;
+    max-width: 100%;
+  }
+  .blog-heroTitle{
+    font-size: 30px;
+    line-height: 1.1;
+  }
+  .blog-heroDesc{
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* ===== SEARCH (rapihin jadi 2 baris kalau sempit) ===== */
+  .blog-search{
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 16px;
+  }
+  .blog-searchIco{
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+  .blog-searchInput{
+    width: 100%;
+    flex: 1 1 100%;
+    padding: .75rem .2rem;
+    font-size: 14px;
+  }
+  .blog-searchBtn{
+    width: 100%;
+    padding: .8rem 1rem;
+    border-radius: 14px;
+  }
+
+  /* ===== CHIPS (biar bisa geser horizontal) ===== */
+  .blog-chips{
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    gap: 8px;
+  }
+  .blog-chips::-webkit-scrollbar{
+    height: 6px;
+  }
+  .blog-chips::-webkit-scrollbar-thumb{
+    background: rgba(255,255,255,.22);
+    border-radius: 999px;
+  }
+  .blog-chips .chip{
+    white-space: nowrap;
+    flex: 0 0 auto;
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  /* ===== FEATURED (jadi 1 kolom + gambar tidak terlalu tinggi) ===== */
+  .blog-featured{
+    grid-template-columns: 1fr;
+    min-height: auto;
+    border-radius: 18px;
+  }
+  .blog-featuredMedia img{
+    height: 200px;
+  }
+  .blog-featuredBody{
+    padding: 14px;
+  }
+  .blog-title{
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .blog-excerpt{
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* ===== TOPBAR LIST (judul + sort jadi turun rapih) ===== */
+  .blog-sortWrap{
+    width: 100%;
+  }
+  .blog-sort{
+    width: 100%;
+    border-radius: 14px;
+  }
+
+  /* ===== GRID CARD (rapihin card) ===== */
+  .blog-card{
+    border-radius: 18px;
+  }
+  .blog-media img{
+    height: 190px;
+  }
+  .blog-body{
+    padding: 12px 12px 14px;
+  }
+  .blog-cardTitle{
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  .blog-cardDesc{
+    font-size: 13.5px;
+    line-height: 1.8;
+  }
+  .blog-meta{
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+
+  /* ===== SIDEBAR (card sidebar rapihin di mobile) ===== */
+  .blog-sideCard{
+    border-radius: 18px;
+    padding: 14px;
+  }
+  .topic-link{
+    border-radius: 14px;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  /* ===== PAGINATION (prev/next + info) ===== */
+  .blog-pagination{
+    margin-top: 22px;
+    margin-bottom: 6px;
+  }
+  .blog-pagination .pagination{
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .blog-pagination .page-link{
+    padding: .55rem .9rem;
+    font-size: 14px;
+  }
+  .blog-pagination #blogPageInfo{
+    width: 100%;
+    text-align: center;
+    padding: .6rem 1rem;
+  }
+
+  /* ===== CTA BAND (biar gak mepet) ===== */
+  .cta-content{
+    padding: 26px 14px;
+    border-radius: 18px;
+  }
+  .cta-title{
+    font-size: 20px;
+  }
+  .cta-sub{
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* ===== WA FLOAT (biar gak nutup konten) ===== */
+  .wa-float{
+    right: 14px;
+    bottom: 14px;
+    padding: 10px 12px;
+  }
+}
+
+</style>
+
+
       <!-- CTA Bawah -->
 <section class="cta-band">
   <div class="container">
@@ -478,115 +718,185 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- BLOG SCRIPT (search + filter + sort) -->
-  <script>
-    (function(){
-      const qInput = document.getElementById('blogSearchInput');
-      const form = document.getElementById('blogSearchForm');
-      const grid = document.getElementById('blogGrid');
-      const items = Array.from(grid.querySelectorAll('.blog-item'));
-      const empty = document.getElementById('blogEmpty');
-      const clearBtn = document.getElementById('blogClearBtn');
-      const sortSel = document.getElementById('blogSort');
+ <script>
+  (function(){
+    const qInput  = document.getElementById('blogSearchInput');
+    const form    = document.getElementById('blogSearchForm');
+    const grid    = document.getElementById('blogGrid');
+    const items   = Array.from(grid.querySelectorAll('.blog-item'));
+    const empty   = document.getElementById('blogEmpty');
+    const clearBtn= document.getElementById('blogClearBtn');
+    const sortSel = document.getElementById('blogSort');
 
-      const chipFilters = Array.from(document.querySelectorAll('.chip-filter'));
-      const topicLinks = Array.from(document.querySelectorAll('.topic-link'));
+    const chipFilters = Array.from(document.querySelectorAll('.chip-filter'));
+    const topicLinks  = Array.from(document.querySelectorAll('.topic-link'));
 
-      let activeTag = 'all';
-      let query = '';
+    // Pagination elements
+    const pager    = document.getElementById('blogPager');
+    const prevBtn  = document.getElementById('blogPrev');
+    const nextBtn  = document.getElementById('blogNext');
+    const pageInfo = document.getElementById('blogPageInfo');
 
-      function normalize(s){
-        return (s || '').toLowerCase().trim();
+    // Config
+    const PER_PAGE = 6; // ubah kalau mau 9/12, dll
+
+    let activeTag = 'all';
+    let query = '';
+    let currentPage = 1;
+
+    function normalize(s){
+      return (s || '').toLowerCase().trim();
+    }
+
+    function matchesTag(item){
+      if(activeTag === 'all') return true;
+      const tags = (item.getAttribute('data-tags') || '')
+        .split(',')
+        .map(t => normalize(t))
+        .filter(Boolean);
+      return tags.includes(activeTag);
+    }
+
+    function matchesQuery(item){
+      if(!query) return true;
+      const title = normalize(item.getAttribute('data-title'));
+      const tags  = normalize(item.getAttribute('data-tags'));
+      return title.includes(query) || tags.includes(query);
+    }
+
+    // get items that match current filters/search
+    function getFilteredItems(){
+      return items.filter(it => matchesTag(it) && matchesQuery(it));
+    }
+
+    function applySort(list){
+      const mode = sortSel.value;
+
+      list.sort((a,b) => {
+        const aTitle = normalize(a.getAttribute('data-title'));
+        const bTitle = normalize(b.getAttribute('data-title'));
+        const aDate  = new Date(a.getAttribute('data-date'));
+        const bDate  = new Date(b.getAttribute('data-date'));
+
+        if(mode === 'az')  return aTitle.localeCompare(bTitle, 'id');
+        if(mode === 'old') return aDate - bDate;
+        return bDate - aDate; // new
+      });
+
+      // Re-append in sorted order (ini juga menjaga urutan saat paginasi)
+      list.forEach(it => grid.appendChild(it));
+    }
+
+    function render(){
+      const filtered = getFilteredItems();
+
+      // Empty state
+      const total = filtered.length;
+      empty.classList.toggle('d-none', total !== 0);
+
+      // Pagination calculations
+      const totalPages = Math.max(1, Math.ceil(total / PER_PAGE));
+      currentPage = Math.min(Math.max(1, currentPage), totalPages);
+
+      const start = (currentPage - 1) * PER_PAGE;
+      const end   = start + PER_PAGE;
+
+      // Hide all first
+      items.forEach(it => it.classList.add('d-none'));
+
+      // Sort filtered then show only current page
+      applySort(filtered);
+      filtered.slice(start, end).forEach(it => it.classList.remove('d-none'));
+
+      // Pager visibility & state
+      if(pager){
+        pager.classList.toggle('d-none', total === 0); // hide pager if no results
       }
 
-      function matchesTag(item){
-        if(activeTag === 'all') return true;
-        const tags = (item.getAttribute('data-tags') || '').split(',').map(t => normalize(t));
-        return tags.includes(activeTag);
+      if(pageInfo){
+        pageInfo.textContent = `Halaman ${currentPage} / ${totalPages}`;
       }
 
-      function matchesQuery(item){
-        if(!query) return true;
-        const title = normalize(item.getAttribute('data-title'));
-        const tags  = normalize(item.getAttribute('data-tags'));
-        return title.includes(query) || tags.includes(query);
-      }
+      // Enable/disable prev/next
+      prevBtn.classList.toggle('disabled', currentPage <= 1);
+      nextBtn.classList.toggle('disabled', currentPage >= totalPages);
+    }
 
-      function applyVisibility(){
-        let shown = 0;
-        items.forEach(it => {
-          const ok = matchesTag(it) && matchesQuery(it);
-          it.classList.toggle('d-none', !ok);
-          if(ok) shown++;
-        });
-        empty.classList.toggle('d-none', shown !== 0);
-      }
+    function resetToFirstPage(){
+      currentPage = 1;
+    }
 
-      function applySort(){
-        const mode = sortSel.value;
-        const visible = items.filter(it => !it.classList.contains('d-none'));
+    function setActiveChip(tag){
+      activeTag = tag;
+      chipFilters.forEach(btn => btn.classList.toggle('is-active', normalize(btn.dataset.tag) === tag));
+      resetToFirstPage();
+      render();
+      grid.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
 
-        visible.sort((a,b) => {
-          const aTitle = normalize(a.getAttribute('data-title'));
-          const bTitle = normalize(b.getAttribute('data-title'));
-          const aDate  = new Date(a.getAttribute('data-date'));
-          const bDate  = new Date(b.getAttribute('data-date'));
+    // Search submit
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      query = normalize(qInput.value);
+      resetToFirstPage();
+      render();
+    });
 
-          if(mode === 'az') return aTitle.localeCompare(bTitle, 'id');
-          if(mode === 'old') return aDate - bDate;
-          return bDate - aDate; // new
-        });
+    // Live search
+    qInput.addEventListener('input', () => {
+      query = normalize(qInput.value);
+      resetToFirstPage();
+      render();
+    });
 
-        // Re-append only visible items first (tetap menjaga layout)
-        visible.forEach(it => grid.appendChild(it));
-      }
+    // Chips filter
+    chipFilters.forEach(btn => {
+      btn.addEventListener('click', () => setActiveChip(normalize(btn.dataset.tag)));
+    });
 
-      function setActiveChip(tag){
-        activeTag = tag;
-        chipFilters.forEach(btn => btn.classList.toggle('is-active', btn.dataset.tag === tag));
-        applyVisibility();
-        applySort();
-        grid.scrollIntoView({behavior: 'smooth', block: 'start'});
-      }
+    // Topic shortcuts
+    topicLinks.forEach(btn => {
+      btn.addEventListener('click', () => setActiveChip(normalize(btn.dataset.tag)));
+    });
 
-      // Search submit
-      form.addEventListener('submit', (e) => {
+    // Sort change
+    sortSel.addEventListener('change', () => {
+      resetToFirstPage();
+      render();
+    });
+
+    // Reset
+    clearBtn.addEventListener('click', () => {
+      qInput.value = '';
+      query = '';
+      setActiveChip('all');
+    });
+
+    // Prev/Next actions
+    if(prevBtn){
+      prevBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        query = normalize(qInput.value);
-        applyVisibility();
-        applySort();
+        if(prevBtn.classList.contains('disabled')) return;
+        currentPage -= 1;
+        render();
+        grid.scrollIntoView({behavior: 'smooth', block: 'start'});
       });
+    }
 
-      // Live search
-      qInput.addEventListener('input', () => {
-        query = normalize(qInput.value);
-        applyVisibility();
-        applySort();
+    if(nextBtn){
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if(nextBtn.classList.contains('disabled')) return;
+        currentPage += 1;
+        render();
+        grid.scrollIntoView({behavior: 'smooth', block: 'start'});
       });
+    }
 
-      // Chips filter
-      chipFilters.forEach(btn => {
-        btn.addEventListener('click', () => setActiveChip(normalize(btn.dataset.tag)));
-      });
+    // Init
+    render();
+  })();
+</script>
 
-      // Topic shortcuts
-      topicLinks.forEach(btn => {
-        btn.addEventListener('click', () => setActiveChip(normalize(btn.dataset.tag)));
-      });
-
-      // Sort
-      sortSel.addEventListener('change', () => applySort());
-
-      // Reset
-      clearBtn.addEventListener('click', () => {
-        qInput.value = '';
-        query = '';
-        setActiveChip('all');
-      });
-
-      // Init
-      applyVisibility();
-      applySort();
-    })();
-  </script>
 </body>
 </html>
